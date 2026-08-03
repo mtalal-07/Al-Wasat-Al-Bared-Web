@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weldery — Welding & Iron Works Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-accent:#F6A821;
+  --color-accent-dark:#DD8F0F;
+  --color-dark:#15171F;
+  --color-dark-alt:#1E212C;
+  --color-light:#F6F6F8;
+  --color-white:#FFFFFF;
+  --color-text-heading:#171821;
+  --color-text-body:#6E7180;
+  --color-text-on-dark:#FFFFFF;
+  --color-text-on-dark-muted:#A6A9B7;
+  --color-border:#E7E7EC;
+  --color-border-dark:#2B2E3A;
+  --font-display:'Poppins',sans-serif;
+  --font-body:'Roboto',sans-serif;
+  --radius-btn:4px;
+  --radius-card:8px;
+  --radius-chip:6px;
+  --shadow-card:0 20px 40px rgba(21,23,31,0.08);
+  --container-max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-body);color:var(--color-text-body);line-height:1.7;background:var(--color-white);font-size:15px;}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--color-text-heading);line-height:1.25;font-weight:700;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+.container{max-width:var(--container-max);margin:0 auto;padding:0 24px;}
+.section{padding:100px 0;}
+@media(max-width:768px){.section{padding:56px 0;}}
+
+/* Eyebrow */
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--color-accent);font-family:var(--font-display);font-weight:600;text-transform:uppercase;font-size:14px;letter-spacing:1.5px;margin-bottom:14px;}
+.eyebrow::before{content:"";width:20px;height:2px;background:var(--color-accent);display:inline-block;}
+.center .eyebrow{justify-content:center;}
+
+h2{font-size:40px;margin-bottom:16px;}
+@media(max-width:768px){h2{font-size:28px;}}
+.section-intro{max-width:600px;color:var(--color-text-body);font-size:16px;}
+.center{text-align:center;}
+.center .section-intro{margin:0 auto;}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;border-radius:var(--radius-btn);font-family:var(--font-display);font-weight:600;font-size:15px;cursor:pointer;border:none;transition:.15s ease;white-space:nowrap;}
+.btn-primary{background:var(--color-accent);color:var(--color-dark);}
+.btn-primary:hover{background:var(--color-accent-dark);}
+.btn-outline-light{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff;}
+.btn-outline-light:hover{background:#fff;color:var(--color-dark);}
+.btn-dark{background:var(--color-dark);color:#fff;}
+.btn-dark:hover{background:#000;}
+.icon-chip-btn{width:20px;height:20px;border-radius:50%;background:var(--color-dark);display:inline-flex;align-items:center;justify-content:center;font-size:11px;}
+
+/* Icon boxes */
+.icon-box{width:52px;height:52px;border-radius:var(--radius-chip);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.icon-box.yellow{background:var(--color-accent);color:var(--color-dark);}
+.icon-box.dark{background:var(--color-dark);color:var(--color-accent);}
+
+/* ---------- TOP BAR ---------- */
+.topbar{background:var(--color-dark);color:var(--color-text-on-dark-muted);font-size:13px;padding:10px 0;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;}
+.topbar .socials{display:flex;gap:14px;}
+.topbar .socials a{width:28px;height:28px;border:1px solid var(--color-border-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;}
+.topbar strong{color:var(--color-accent);}
+
+/* ---------- NAV ---------- */
+.navbar{background:#fff;padding:20px 0;border-bottom:1px solid var(--color-border);}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--color-text-heading);}
+.logo-mark{width:34px;height:34px;background:var(--color-accent);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--color-dark);font-weight:800;}
+.nav-links{display:flex;gap:36px;font-weight:500;font-size:15px;}
+@media(max-width:900px){.nav-links{display:none;}}
+.nav-cta{display:flex;align-items:center;gap:12px;}
+.nav-cta .icon-box{width:44px;height:44px;font-size:18px;}
+.nav-cta .label{font-size:12px;color:var(--color-text-body);}
+.nav-cta .number{font-family:var(--font-display);font-weight:700;color:var(--color-text-heading);}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;color:#fff;padding:160px 0 220px;background:linear-gradient(120deg,rgba(21,23,31,.92) 0%, rgba(21,23,31,.65) 100%), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80') center/cover;}
+.hero-content{max-width:640px;}
+.hero h1{font-size:56px;color:#fff;margin-bottom:22px;}
+@media(max-width:768px){.hero h1{font-size:32px;}.hero{padding:110px 0 260px;}}
+.hero p{color:var(--color-text-on-dark-muted);font-size:17px;max-width:520px;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:18px;flex-wrap:wrap;}
+
+/* floating quote card */
+.quote-float{position:relative;max-width:var(--container-max);margin:-140px auto 0;padding:0 24px;z-index:5;}
+.quote-panel{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:var(--radius-card);box-shadow:var(--shadow-card);overflow:hidden;}
+@media(max-width:800px){.quote-panel{grid-template-columns:1fr;}}
+.quote-left{padding:40px;}
+.quote-left h4{font-size:20px;margin-bottom:6px;}
+.quote-left p{font-size:14px;margin-bottom:20px;}
+.quote-form{display:flex;border:1px solid var(--color-border);border-radius:var(--radius-btn);overflow:hidden;}
+.quote-form input{flex:1;border:none;padding:16px;font-family:var(--font-body);outline:none;}
+.quote-form button{border:none;background:var(--color-accent);color:var(--color-dark);font-family:var(--font-display);font-weight:600;padding:0 26px;cursor:pointer;}
+.quote-right{background:var(--color-dark);color:#fff;padding:40px;}
+.quote-right h4{color:#fff;font-size:20px;margin-bottom:16px;}
+.quote-right ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-bottom:18px;}
+.quote-right li{font-size:14px;color:var(--color-text-on-dark-muted);display:flex;gap:8px;align-items:center;}
+.quote-right li::before{content:"—";color:var(--color-accent);}
+.quote-right a.link{color:var(--color-accent);font-weight:600;font-family:var(--font-display);font-size:14px;}
+
+/* ---------- INTRO / ABOUT SPLIT (dark) ---------- */
+.intro-dark{background:var(--color-dark);color:#fff;padding-top:80px;}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:900px){.intro-grid{grid-template-columns:1fr;}}
+.intro-dark h2{color:#fff;}
+.collage{position:relative;height:380px;}
+.collage img{position:absolute;border-radius:var(--radius-card);object-fit:cover;}
+.collage .img1{width:60%;height:70%;top:0;left:0;}
+.collage .img2{width:55%;height:55%;bottom:0;right:0;border:6px solid var(--color-dark);}
+.collage .accent-sq{position:absolute;width:70px;height:70px;background:var(--color-accent);bottom:-20px;left:20%;border-radius:var(--radius-chip);z-index:-1;}
+.feature-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0;}
+.feature-mini{display:flex;gap:14px;align-items:flex-start;}
+.feature-mini h4{color:#fff;font-size:16px;margin-bottom:6px;}
+.feature-mini p{font-size:13px;color:var(--color-text-on-dark-muted);}
+.tag-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:14px;color:var(--color-text-on-dark-muted);}
+.tag-list li::before{content:"— ";color:var(--color-accent);}
+
+/* ---------- STATS ---------- */
+.stats-strip{background:var(--color-dark);padding:60px 0 90px;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+@media(max-width:700px){.stats-grid{grid-template-columns:1fr 1fr;gap:30px;}}
+.stat-item{text-align:center;border-right:1px solid var(--color-border-dark);padding:0 20px;}
+.stat-item:last-child{border-right:none;}
+@media(max-width:700px){.stat-item{border-right:none;}}
+.stat-item .icon-ring{width:50px;height:50px;border:1.5px solid var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-accent);font-size:20px;margin:0 auto 16px;}
+.stat-num{font-family:var(--font-display);font-weight:700;font-size:42px;color:#fff;}
+.stat-num span{color:var(--color-accent);font-size:22px;vertical-align:top;}
+.stat-label{font-size:14px;color:var(--color-text-on-dark-muted);margin-top:6px;}
+
+/* ---------- WHY CHOOSE US ---------- */
+.why-section{background:var(--color-dark);color:#fff;}
+.why-section h2{color:#fff;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr;}}
+.skill-row{margin-bottom:26px;}
+.skill-row .top-line{display:flex;justify-content:space-between;font-family:var(--font-display);font-weight:600;color:#fff;margin-bottom:10px;font-size:15px;}
+.skill-row .top-line span{color:var(--color-accent);}
+.track{height:6px;background:var(--color-border-dark);border-radius:6px;overflow:hidden;}
+.fill{height:100%;background:var(--color-accent);border-radius:6px;}
+.serve-panel{background:var(--color-dark-alt);border:1px solid var(--color-border-dark);border-radius:var(--radius-card);padding:40px;}
+.serve-panel h3{color:#fff;font-size:22px;margin-bottom:14px;}
+.serve-panel p{font-size:14px;margin-bottom:22px;}
+.check-list li{display:flex;gap:10px;align-items:center;font-size:14px;margin-bottom:12px;color:var(--color-text-on-dark-muted);}
+.check-list li::before{content:"✓";width:20px;height:20px;background:var(--color-accent);color:var(--color-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
+.serve-panel .btn{margin:24px 0 26px;}
+.contact-rows{display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--color-border-dark);padding-top:24px;}
+.contact-row{display:flex;gap:14px;align-items:center;font-size:14px;color:#fff;}
+.contact-row .dot{width:36px;height:36px;background:var(--color-dark);border:1px solid var(--color-accent);color:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
+
+/* ---------- FEATURE STRIP 3-UP ---------- */
+.feature-strip{padding:0;}
+.feature-strip-grid{display:grid;grid-template-columns:repeat(3,1fr);}
+@media(max-width:800px){.feature-strip-grid{grid-template-columns:1fr;}}
+.fcard{padding:48px 40px;display:flex;flex-direction:column;gap:16px;}
+.fcard.yellow{background:var(--color-accent);color:var(--color-dark);}
+.fcard.dark{background:var(--color-dark);color:#fff;}
+.fcard.white{background:#fff;color:var(--color-text-heading);border:1px solid var(--color-border);}
+.fcard h4{font-size:19px;}
+.fcard.yellow h4{color:var(--color-dark);}
+.fcard.dark h4{color:#fff;}
+.fcard p{font-size:14px;}
+.fcard.yellow p{color:rgba(21,23,31,.7);}
+.fcard.dark p{color:var(--color-text-on-dark-muted);}
+.fcard .icon-box{background:transparent;border:2px solid currentColor;width:56px;height:56px;border-radius:var(--radius-card);}
+
+/* ---------- SERVICES ---------- */
+.services-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px;}
+@media(max-width:800px){.services-header{grid-template-columns:1fr;}}
+.services-header .right-copy{font-size:15px;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-card);padding:36px 30px;transition:.2s ease;}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:transparent;}
+.service-card h4{font-size:18px;margin:20px 0 10px;}
+.service-card p{font-size:14px;margin-bottom:18px;}
+.service-card .read-more{color:var(--color-accent);font-family:var(--font-display);font-weight:600;font-size:14px;}
+.service-card.dark-cta{background:var(--color-dark);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;}
+.service-card.dark-cta h4{color:#fff;}
+.service-card.dark-cta p{color:var(--color-text-on-dark-muted);}
+
+/* ---------- CTA BANNER ---------- */
+.cta-banner{position:relative;color:#fff;text-align:center;padding:110px 0;background:linear-gradient(120deg,rgba(21,23,31,.93),rgba(21,23,31,.7)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80') center/cover fixed;}
+.cta-banner h2{color:#fff;max-width:700px;margin:0 auto 16px;}
+.cta-banner p{max-width:560px;margin:0 auto 32px;color:var(--color-text-on-dark-muted);}
+
+/* ---------- PROCESS ---------- */
+.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+@media(max-width:900px){.process-grid{grid-template-columns:1fr;}}
+.process-img-wrap{position:relative;}
+.process-img-wrap img{border-radius:var(--radius-card);width:100%;height:460px;object-fit:cover;}
+.process-img-wrap .accent-block{position:absolute;top:-24px;left:-24px;width:110px;height:110px;background:var(--color-accent);border-radius:var(--radius-chip);z-index:-1;}
+.floating-note{position:absolute;bottom:24px;left:24px;right:24px;background:#fff;border-radius:var(--radius-card);padding:22px 26px;box-shadow:var(--shadow-card);}
+.floating-note p{font-size:14px;color:var(--color-text-heading);font-weight:500;margin-bottom:8px;}
+.floating-note a{color:var(--color-accent);font-family:var(--font-display);font-weight:600;font-size:14px;}
+.step-row{display:flex;gap:20px;margin-bottom:28px;align-items:flex-start;}
+.step-row .icon-box{width:48px;height:48px;font-size:18px;}
+.step-row h4{font-size:17px;margin-bottom:6px;}
+.step-row p{font-size:14px;}
+
+/* ---------- TESTIMONIAL ---------- */
+.testimonial-section{position:relative;padding:120px 0 160px;background:linear-gradient(120deg,rgba(21,23,31,.85),rgba(21,23,31,.5)), url('https://images.unsplash.com/photo-1533055640609-24b498dfd74c?auto=format&fit=crop&w=1600&q=80') center/cover;}
+.testi-card{margin-left:auto;max-width:480px;background:#fff;border-radius:var(--radius-card);padding:40px;box-shadow:var(--shadow-card);position:relative;}
+.testi-card .quote-mark{font-family:var(--font-display);font-size:60px;color:var(--color-accent);position:absolute;top:20px;right:30px;line-height:1;opacity:.5;}
+.stars{color:var(--color-accent);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+.testi-card p{font-size:15px;color:var(--color-text-body);margin-bottom:22px;}
+.testi-person{display:flex;align-items:center;gap:14px;}
+.testi-person img{width:52px;height:52px;border-radius:50%;object-fit:cover;}
+.testi-person strong{display:block;font-family:var(--font-display);color:var(--color-text-heading);font-size:15px;}
+.testi-person span{font-size:13px;color:var(--color-text-body);}
+
+/* ---------- NEWS ---------- */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px;}
+@media(max-width:800px){.news-grid{grid-template-columns:1fr;}}
+.news-hero-card{position:relative;border-radius:var(--radius-card);overflow:hidden;min-height:460px;background:linear-gradient(180deg,rgba(21,23,31,.1),rgba(21,23,31,.9)), url('https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=80') center/cover;display:flex;align-items:flex-end;padding:36px;}
+.news-hero-card h3{color:#fff;font-size:24px;max-width:280px;}
+.news-small-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.news-card img{width:100%;height:140px;object-fit:cover;border-radius:var(--radius-card);margin-bottom:16px;}
+.news-card .cat{color:var(--color-accent);font-size:12px;font-weight:600;font-family:var(--font-display);text-transform:uppercase;margin-bottom:8px;display:block;}
+.news-card h4{font-size:16px;margin-bottom:10px;}
+.news-card .read-more{color:var(--color-accent);font-size:13px;font-weight:600;font-family:var(--font-display);}
+
+/* ---------- NEWSLETTER ---------- */
+.newsletter{background:var(--color-dark);color:#fff;text-align:center;padding:70px 0;}
+.newsletter h3{color:#fff;font-size:28px;margin:10px 0 30px;}
+.newsletter-form{display:flex;max-width:520px;margin:0 auto;border-radius:var(--radius-btn);overflow:hidden;border:1px solid var(--color-border-dark);}
+.newsletter-form input{flex:1;border:none;padding:16px 20px;font-family:var(--font-body);background:#fff;outline:none;}
+.newsletter-form button{border:none;background:var(--color-accent);color:var(--color-dark);font-family:var(--font-display);font-weight:600;padding:0 30px;cursor:pointer;}
+
+/* ---------- FOOTER ---------- */
+.footer{background:#0F1015;color:var(--color-text-on-dark-muted);padding:80px 0 0;font-size:14px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:60px;border-bottom:1px solid var(--color-border-dark);}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}}
+.footer h4{color:#fff;font-size:16px;margin-bottom:20px;}
+.footer ul li{margin-bottom:12px;}
+.footer .logo{color:#fff;margin-bottom:16px;}
+.footer .socials{display:flex;gap:12px;margin-top:20px;}
+.footer .socials a{width:32px;height:32px;border:1px solid var(--color-border-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;}
+.call-chip{display:flex;align-items:center;gap:12px;background:var(--color-dark-alt);border-radius:var(--radius-card);padding:14px 18px;margin-top:14px;}
+.call-chip .icon-box{width:36px;height:36px;font-size:15px;}
+.call-chip strong{color:#fff;display:block;font-size:15px;}
+.footer-bottom{display:flex;justify-content:space-between;padding:24px 0;font-size:13px;}
+@media(max-width:600px){.footer-bottom{flex-direction:column;gap:8px;text-align:center;}}
+.footer-bottom .accent{color:var(--color-accent);}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="socials">
+      <a href="#">f</a><a href="#">t</a><a href="#">in</a><a href="#">ig</a>
+    </div>
+    <div>We Provide The <strong>Best Service &amp; Discounts</strong> For You</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo"><span class="logo-mark">W</span> Weldery</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="icon-box yellow">📞</div>
+      <div>
+        <div class="label">Get Consultation</div>
+        <div class="number">(+62) 81 487 1843</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">We Build The Best.</div>
+    <h1>We Give Best Quality Welding &amp; Iron Works Services</h1>
+    <p>Precision fabrication and industrial welding built on certified craftsmanship, on-time delivery, and equipment you can trust for every job site.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#">Get Started</a>
+      <a class="btn btn-outline-light" href="#">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<div class="quote-float">
+  <div class="quote-panel">
+    <div class="quote-left">
+      <h4>Request For A Quote</h4>
+      <p>Tell us about your project and get a response from our team within one business day.</p>
+      <div class="quote-form">
+        <input type="email" placeholder="Your Email">
+        <button>Request</button>
+      </div>
+    </div>
+    <div class="quote-right">
+      <h4>How Can I Help You?</h4>
+      <ul>
+        <li>Laser Cutting</li>
+        <li>Engineering</li>
+        <li>Factory Industry</li>
+        <li>Fabrication</li>
+        <li>Titanium Welding</li>
+      </ul>
+      <a class="link" href="#">Explore Service →</a>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO / ABOUT -->
+<section class="intro-dark section">
+  <div class="container">
+    <div class="eyebrow">We Build The Best.</div>
+    <h2 style="max-width:640px;">We Give Best Quality Welding &amp; Iron Works Services</h2>
+    <div class="intro-grid" style="margin-top:40px;">
+      <div class="collage">
+        <img class="img1" src="https://images.unsplash.com/photo-1581091870622-1e4e0e3ba7f8?auto=format&fit=crop&w=600&q=80" alt="Welder at work">
+        <img class="img2" src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="Metal fabrication close up">
+        <div class="accent-sq"></div>
+      </div>
+      <div>
+        <p style="color:var(--color-text-on-dark-muted);margin-bottom:26px;">Two decades of hands-on fabrication experience, paired with certified welders and modern equipment, means every project — small repair or full structural build — gets handled with the same discipline.</p>
+        <div class="feature-mini-grid">
+          <div class="feature-mini">
+            <div class="icon-box yellow" style="width:44px;height:44px;font-size:18px;">⏱</div>
+            <div><h4>Strict Deadline</h4><p>We plan around your schedule, not ours.</p></div>
+          </div>
+          <div class="feature-mini">
+            <div class="icon-box dark" style="width:44px;height:44px;font-size:18px;">👷</div>
+            <div><h4>Talented Staff</h4><p>Certified welders across every specialty.</p></div>
+          </div>
+        </div>
+        <ul class="tag-list">
+          <li>Titanium Welding</li>
+          <li>Mobile Welding</li>
+          <li>Stainless Steel Welding</li>
+          <li>Magnesium Welding</li>
+          <li>Pipe Welding</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="icon-ring">🏆</div>
+        <div class="stat-num">753<span>+</span></div>
+        <div class="stat-label">Project Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon-ring">🛠</div>
+        <div class="stat-num">579<span>+</span></div>
+        <div class="stat-label">Our Equipments</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon-ring">🙂</div>
+        <div class="stat-num">342<span>+</span></div>
+        <div class="stat-label">Satisfied Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon-ring">🏭</div>
+        <div class="stat-num">231<span>+</span></div>
+        <div class="stat-label">Industry Expertise</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section section center">
+  <div class="container">
+    <div class="eyebrow">Why Choose Us.</div>
+    <h2>We Are Perfect For Welding &amp; Metal Problems</h2>
+    <p class="section-intro" style="color:var(--color-text-on-dark-muted);">Reliable delivery, certified teams, and modern equipment come together so every welding and metal job is handled right the first time.</p>
+
+    <div class="why-grid" style="text-align:left;">
+      <div>
+        <h3 style="color:#fff;font-size:22px;margin-bottom:30px;">This Is Our Expertise</h3>
+        <div class="skill-row">
+          <div class="top-line">Welder Services <span>92%</span></div>
+          <div class="track"><div class="fill" style="width:92%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="top-line">Metal Works <span>82%</span></div>
+          <div class="track"><div class="fill" style="width:82%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="top-line">Arrival Time <span>97%</span></div>
+          <div class="track"><div class="fill" style="width:97%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="top-line">Modern Technology <span>73%</span></div>
+          <div class="track"><div class="fill" style="width:73%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="top-line">Certified Team <span>87%</span></div>
+          <div class="track"><div class="fill" style="width:87%;"></div></div>
+        </div>
+      </div>
+
+      <div class="serve-panel">
+        <h3>We Are Always Ready To Serve</h3>
+        <p>Whatever the scale of the job, our crews show up prepared, on schedule, and ready to work.</p>
+        <ul class="check-list">
+          <li>We Have Professional Workers</li>
+          <li>On Time In Progress</li>
+          <li>Friendly To Serve Customers</li>
+          <li>Give The Best &amp; Fair</li>
+        </ul>
+        <a class="btn btn-primary" href="#">Contact Us</a>
+        <div class="contact-rows">
+          <div class="contact-row"><div class="dot">📍</div> Jl. Rayya Puputan No 142, Denpasar</div>
+          <div class="contact-row"><div class="dot">🕒</div> Mon - Fri : 8:00 am - 5:00 pm</div>
+          <div class="contact-row"><div class="dot">📞</div> (+62) 81 487 1843</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE STRIP -->
+<section class="feature-strip">
+  <div class="feature-strip-grid">
+    <div class="fcard yellow">
+      <div class="icon-box">🛡</div>
+      <h4>100% Guarantee</h4>
+      <p>Every weld and repair is backed by our workmanship guarantee.</p>
+    </div>
+    <div class="fcard dark">
+      <div class="icon-box">💬</div>
+      <h4>Free Consultations</h4>
+      <p>Talk through your project with our team before you commit.</p>
+    </div>
+    <div class="fcard white">
+      <div class="icon-box">📞</div>
+      <h4>24/7 Support</h4>
+      <p>Emergency crews on call around the clock, every day of the week.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="eyebrow">Our Services</div>
+        <h2>We Provide Best Services</h2>
+      </div>
+      <p class="right-copy">From structural steel to precision fabrication, our services cover every stage of your project — planning, welding, and finishing.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon-box dark">🔧</div>
+        <h4>Strong Welding</h4>
+        <p>Structural-grade welds tested to hold up under real industrial load.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-box dark">⚙️</div>
+        <h4>Metal Quality</h4>
+        <p>Sourced and inspected materials that meet certified industry standards.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-box dark">⏰</div>
+        <h4>On Time Target</h4>
+        <p>Project timelines built to hit deadlines without cutting corners.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-box dark">💲</div>
+        <h4>Affordable Prices</h4>
+        <p>Transparent, fair quotes with no hidden costs added later.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-box dark">🏗</div>
+        <h4>Fabrication</h4>
+        <p>Custom metal fabrication from concept drawings to finished parts.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+      <div class="service-card dark-cta">
+        <h4>Explore More Services</h4>
+        <p>See the full range of welding and iron works we offer.</p>
+        <a class="btn btn-primary" href="#">All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center;">We're Ready Anytime.</div>
+    <h2>We Are Available For 24/7 Emergency Services</h2>
+    <p>Urgent repair or unplanned downtime — our emergency crews are one call away, day or night.</p>
+    <a class="btn btn-primary" href="tel:+62814871843"><span class="icon-chip-btn">📞</span> (+62) 81 487 1843</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="process-grid">
+      <div class="process-img-wrap">
+        <div class="accent-block"></div>
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Welder with helmet">
+        <div class="floating-note">
+          <p>Get A Free Estimate Or Schedule An Appointment With Us.</p>
+          <a href="#">Get Started →</a>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">How We Works.</div>
+        <h2>Procedure For Getting Our Best Service</h2>
+        <p class="section-intro" style="margin-bottom:36px;">A simple four-step process, from first contact to finished job, designed to keep you informed at every stage.</p>
+        <div class="step-row">
+          <div class="icon-box dark">1</div>
+          <div><h4>Select Your Services</h4><p>Tell us what kind of welding or fabrication work you need.</p></div>
+        </div>
+        <div class="step-row">
+          <div class="icon-box yellow">2</div>
+          <div><h4>Make an Appointment</h4><p>Pick a time that works for a site visit or consultation.</p></div>
+        </div>
+        <div class="step-row">
+          <div class="icon-box dark">3</div>
+          <div><h4>Make Payment</h4><p>Transparent, itemized quotes with flexible payment options.</p></div>
+        </div>
+        <div class="step-row">
+          <div class="icon-box yellow">4</div>
+          <div><h4>Get Amazing Services</h4><p>Our certified crew delivers the finished work on schedule.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="stars">★★★★★</div>
+      <p>The crew showed up on time, handled our structural repair without any delays, and the quality of the weld work was better than we expected.</p>
+      <div class="testi-person">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Casey Doyle">
+        <div>
+          <strong>Casey Doyle</strong>
+          <span>Entrepreneur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section center">
+  <div class="container">
+    <div class="eyebrow">Latest News.</div>
+    <h2>News &amp; Article</h2>
+    <div class="news-grid" style="text-align:left;">
+      <div class="news-hero-card">
+        <h3>It Joins Two Pieces Of Metal</h3>
+      </div>
+      <div class="news-small-grid">
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" alt="Engineering tips">
+          <span class="cat">Tips</span>
+          <h4>How To In Engineering</h4>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1581093458791-9d42cc0dc9c4?auto=format&fit=crop&w=400&q=80" alt="Laser cutting">
+          <span class="cat">Guide</span>
+          <h4>How To Easy Laser Cutting</h4>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=400&q=80" alt="Steel door manufacturing">
+          <span class="cat">Fabrication</span>
+          <h4>Manufacturing The Steel Door</h4>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=400&q=80" alt="Metal product creation">
+          <span class="cat">Process</span>
+          <h4>Creating A Metal Product</h4>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center;">Subscribe &amp; Follow Us</div>
+    <h3>Subscribe &amp; Get More Information</h3>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your Email">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><span class="logo-mark">W</span> Weldery</div>
+        <p>Certified welding and iron works services for industrial, commercial, and residential projects.</p>
+        <div class="socials"><a href="#">f</a><a href="#">t</a><a href="#">in</a><a href="#">ig</a></div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Condition</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul>
+          <li>📍 Jl. Rayya Puputan No 142, Denpasar</li>
+          <li>🕒 Mon - Fri : 8:00 am - 5:00 pm</li>
+        </ul>
+        <div class="call-chip">
+          <div class="icon-box yellow">📞</div>
+          <div>
+            <span style="font-size:12px;">Call Us Today</span>
+            <strong>(+62) 81 487 1843</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © 2026 Weldery. All Rights Reserved.</span>
+      <span>Design System — <span class="accent">Weldery Template</span></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

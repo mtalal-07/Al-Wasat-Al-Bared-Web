@@ -1,0 +1,258 @@
+/* Marquee Container */
+.marquee-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Marquee Row */
+.marquee-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  width: fit-content;
+  will-change: transform;
+}
+
+/* Right to Left Animation */
+.marquee-rtl {
+  animation: scroll-rtl 60s linear infinite;
+}
+
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+
+/* Marquee Item - Individual Company Name */
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: fit-content;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Company Name Text */
+.marquee-company-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #F6A821;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.marquee-item:hover .marquee-company-name {
+  color: #DD8F0F;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marquee-row {
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .marquee-rtl {
+    animation-duration: 50s;
+  }
+
+  .marquee-company-name {
+    font-size: 0.9rem;
+  }
+
+  .marquee-item:hover .marquee-company-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-row {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .marquee-rtl {
+    animation-duration: 45s;
+  }
+
+  .marquee-company-name {
+    font-size: 0.75rem;
+  }
+
+  .marquee-item {
+    padding: 0.5rem 1rem;
+  }
+
+  .marquee-item:hover .marquee-company-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* Performance optimization */
+@supports (contain: content) {
+  .marquee-row {
+    contain: content;
+  }
+
+  .marquee-item {
+    contain: layout style paint;
+  }
+}
+
+/* Accessibility - Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-rtl {
+    animation: none;
+  }
+
+  .marquee-item {
+    transition: none;
+  }
+
+  .marquee-company-name {
+    transition: none;
+  }
+}
+
+/* Slower Right to Left Animation for About Page */
+.marquee-rtl-slow {
+  animation: scroll-rtl 120s linear infinite;
+}
+
+/* Larger, Bolder Company Name for About Page */
+.marquee-company-name-large {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #171821;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.marquee-item:hover .marquee-company-name-large {
+  color: #F6A821;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for large marquee */
+@media (max-width: 768px) {
+  .marquee-rtl-slow {
+    animation-duration: 100s;
+  }
+
+  .marquee-company-name-large {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-rtl-slow {
+    animation-duration: 90s;
+  }
+
+  .marquee-company-name-large {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+/* ============ SMOOTH MARQUEE WITH GRADIENT MASK (About Page) ============ */
+.marquee-mask {
+  position: relative;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.marquee-track-smooth {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-smooth 80s linear infinite;
+}
+
+.marquee-mask:hover .marquee-track-smooth {
+  animation-play-state: paused;
+}
+
+.marquee-item-dot {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  padding: 0 60px;
+}
+
+.marquee-item-dot::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  margin-left: 60px;
+}
+
+@keyframes marquee-scroll-smooth {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments for smooth marquee */
+@media (max-width: 768px) {
+  .marquee-track-smooth {
+    animation-duration: 60s;
+  }
+
+  .marquee-item-dot {
+    font-size: 16px;
+    padding: 0 40px;
+  }
+
+  .marquee-item-dot::after {
+    width: 5px;
+    height: 5px;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-track-smooth {
+    animation-duration: 50s;
+  }
+
+  .marquee-item-dot {
+    font-size: 14px;
+    padding: 0 30px;
+  }
+
+  .marquee-item-dot::after {
+    width: 4px;
+    height: 4px;
+    margin-left: 30px;
+  }
+}
+
