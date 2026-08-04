@@ -111,6 +111,30 @@ export default function Portfolio() {
       description: 'Precision bending for specialized metal components using advanced press brake technology. Complex multi-bend formations executed with tight tolerances and consistent quality.',
       image: '/project-bending-works2.jpg',
     },
+    {
+      id: 10,
+      code: 'PRJ_10',
+      title: 'Acoustic Louver Door',
+      category: 'Acoustic Solutions',
+      description: 'Custom-engineered acoustic louver doors designed to provide both ventilation and superior sound control. These specialized doors effectively reduce noise transmission while maintaining airflow, ideal for mechanical rooms, generator enclosures, and HVAC equipment spaces.',
+      image: '/Acoustic Louver Door.jpg',
+    },
+    {
+      id: 11,
+      code: 'PRJ_11',
+      title: 'Acoustic Attenuator Systems',
+      category: 'Acoustic Engineering',
+      description: 'Advanced acoustic attenuator systems engineered to significantly reduce noise levels in HVAC ducts and industrial ventilation systems. Featuring optimized baffle configurations and high-performance acoustic materials for maximum sound absorption and minimal pressure drop.',
+      image: '/Acoustic Attenuater.jpg',
+    },
+    {
+      id: 12,
+      code: 'PRJ_12',
+      title: 'Acoustic Fan Enclosure',
+      category: 'Acoustic Solutions',
+      description: 'Industrial-grade acoustic fan enclosures designed to contain and minimize noise from large ventilation fans and blowers. Combining robust structural design with advanced sound-dampening materials to achieve significant noise reduction while ensuring optimal equipment performance and accessibility.',
+      image: '/acoustic fan enclosure.jpg',
+    },
   ]
 
   return (
