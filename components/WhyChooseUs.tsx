@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { MapPin, Clock, Phone } from 'lucide-react'
 import Eyebrow from '@/components/ui/Eyebrow'
 import { useInView } from '@/hooks/useCountUp'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
@@ -95,29 +94,9 @@ export default function WhyChooseUs() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-w btn-primary-w mb-6 inline-flex">
+            <Link href="/contact" className="btn-w btn-primary-w inline-flex">
               Contact Us
             </Link>
-            <div className="flex flex-col gap-3.5 border-t border-border-dark pt-6">
-              <div className="flex gap-3.5 items-center text-sm text-white">
-                <div className="w-9 h-9 bg-iron border border-weld text-weld rounded-full flex items-center justify-center flex-shrink-0">
-                  <MapPin size={14} />
-                </div>
-                Shed # 22, Industrial Area # 1, Sajja, Sharjah, UAE
-              </div>
-              <div className="flex gap-3.5 items-center text-sm text-white">
-                <div className="w-9 h-9 bg-iron border border-weld text-weld rounded-full flex items-center justify-center flex-shrink-0">
-                  <Clock size={14} />
-                </div>
-                Sat - Thu : 8:00 am - 5:00 pm
-              </div>
-              <div className="flex gap-3.5 items-center text-sm text-white">
-                <div className="w-9 h-9 bg-iron border border-weld text-weld rounded-full flex items-center justify-center flex-shrink-0">
-                  <Phone size={14} />
-                </div>
-                +971 6 534 4415
-              </div>
-            </div>
           </motion.div>
           </ScrollReveal>
         </div>
