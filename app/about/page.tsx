@@ -141,7 +141,7 @@ export default function AboutPage() {
             {/* Image Column */}
             <div className="relative min-h-[420px]">
               <Image
-                src="/project-bending-works2.jpg"
+                src="/Why Choose us.png"
                 alt="Metal fabrication close up"
                 fill
                 className="object-cover"
@@ -164,11 +164,11 @@ export default function AboutPage() {
               {/* Stats */}
               <div className="flex gap-[60px] mb-9">
                 <div>
-                  <div className="font-display font-extrabold text-[32px] text-[#DD8F0F]">753+</div>
+                  <div className="font-display font-extrabold text-[32px] text-[#DD8F0F]">500+</div>
                   <div className="text-[13px] text-body mt-1">Project Completed</div>
                 </div>
                 <div>
-                  <div className="font-display font-extrabold text-[32px] text-[#DD8F0F]">342+</div>
+                  <div className="font-display font-extrabold text-[32px] text-[#DD8F0F]">100+</div>
                   <div className="text-[13px] text-body mt-1">Satisfied Clients</div>
                 </div>
               </div>
@@ -177,10 +177,10 @@ export default function AboutPage() {
               <div className="mb-[18px] max-w-[440px]">
                 <div className="flex justify-between text-[13px] font-semibold text-heading font-display mb-2">
                   <span>Fabrication Services</span>
-                  <span>92%</span>
+                  <span>99%</span>
                 </div>
                 <div className="h-1.5 bg-[#E7E7EC] rounded overflow-hidden">
-                  <div className="h-full bg-weld rounded" style={{ width: '92%' }}></div>
+                  <div className="h-full bg-weld rounded" style={{ width: '99%' }}></div>
                 </div>
               </div>
 

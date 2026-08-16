@@ -27,7 +27,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span /><span /> UAE-based metal fabrication
+          <span /> UAE-based metal fabrication
         </motion.p>
 
         <h1 className="hero-kinetic-title">
