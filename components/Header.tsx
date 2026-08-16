@@ -25,8 +25,8 @@ export default function Header() {
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Al Wasat home">
-        <span className="brand-mark">AW</span>
-        <span>AL WASAT <b>METAL INDUSTRIES</b></span>
+        <img src="/logo.png" alt="Al Wasat Logo" className="brand-logo" />
+        <span className="brand-text">AL WASAT AL BARED <b>METAL INDUSTRIES</b></span>
       </Link>
       <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
         {navItems.map((item) => (

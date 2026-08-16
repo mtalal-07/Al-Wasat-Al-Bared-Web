@@ -689,25 +689,22 @@ h2.section-title {
   line-height: 1.05; 
 }
 
+.brand-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: inline-block;
+}
+
 .brand b { 
   display: block; 
   color: #bfc3bd; 
   font-size: .52rem; 
   letter-spacing: .16em; 
   margin-top: .35rem; 
-}
-
-.brand-mark { 
-  display: grid; 
-  place-items: center; 
-  width: 2.35rem; 
-  height: 2.35rem; 
-  color: var(--color-dark); 
-  background: var(--color-accent); 
-  font-family: 'DM Mono', monospace; 
-  font-size: .75rem; 
-  font-weight: 800; 
-  letter-spacing: -.08em; 
 }
 
 .nav-links { 
@@ -922,7 +919,16 @@ h2.section-title {
 @media (max-width: 850px) { 
   .site-header { 
     padding: 1.2rem 5vw; 
-  } 
+  }
+  
+  .brand-logo {
+    height: 38px;
+  }
+  
+  .brand-text {
+    font-size: .7rem;
+  }
+  
   .header-cta { 
     display: none; 
   } 
