@@ -82,7 +82,7 @@ export default function Hero() {
         >
           <span><b>2016</b> established</span>
           <span><b>UAE</b> based</span>
-          <span><b>01</b> trusted partner</span>
+          <span><b>100</b> trusted partners</span>
         </motion.div>
       </div>
 
