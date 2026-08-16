@@ -960,239 +960,382 @@ h2.section-title {
 }
 
 
-/* ============ HERO SECTION RESPONSIVE ENHANCEMENTS ============ */
+/* ============ COMPREHENSIVE WEBSITE RESPONSIVENESS ============ */
+/* Desktop styles remain unchanged - only adding mobile/tablet optimizations */
 
-/* Tablet Landscape - 1024px and below */
-@media (max-width: 1024px) {
-  .hero {
-    min-height: 85vh;
-    padding: 7rem 4vw 4rem;
+/* Large Tablets and Small Desktops - 1200px and below */
+@media (max-width: 1200px) {
+  .container-w {
+    padding: 0 32px;
   }
 
-  .hero-content {
-    max-width: 48rem;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.5rem, 5.5vw, 5rem);
-  }
-
-  .hero-copy {
-    max-width: 26rem;
-    font-size: clamp(0.95rem, 2vw, 1rem);
-  }
-
-  .hero-actions {
-    margin-top: 1.8rem;
-  }
-
-  .hero-proof {
-    gap: clamp(1rem, 2.5vw, 1.5rem);
-    margin-top: 3.5rem;
+  .section-w {
+    padding: 80px 0;
   }
 }
 
-/* Tablet Portrait - 768px and below */
+/* Tablets - 1024px and below */
+@media (max-width: 1024px) {
+  .container-w {
+    padding: 0 28px;
+  }
+
+  .section-w {
+    padding: 70px 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  /* About Section */
+  .about-collage {
+    max-width: 420px;
+  }
+
+  /* Services Grid */
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Stats Cards */
+  .stats-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .premium-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablets Portrait - 768px and below */
 @media (max-width: 768px) {
-  .hero {
-    min-height: 90vh;
-    padding: 6rem 5vw 3.5rem;
-    align-items: center;
+  body {
+    font-size: 16px;
   }
 
-  .hero-content {
+  .container-w {
+    padding: 0 24px;
+  }
+
+  .section-w {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  /* Buttons */
+  .btn-w {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  /* About Section */
+  .about-collage {
     max-width: 100%;
+    margin: 0 auto 40px;
   }
 
-  .hero h1 {
-    margin: 1rem 0 1.2rem;
-    font-size: clamp(2.2rem, 7vw, 3.5rem);
-    line-height: 1.1;
+  /* Service Cards - Stack on tablet */
+  .service-card-animated {
+    padding: 40px 24px;
   }
 
-  .hero-copy {
-    max-width: 100%;
-    font-size: 0.95rem;
-    line-height: 1.6;
+  /* Why Choose Us */
+  .stagger-children > * {
+    margin-bottom: 20px;
   }
 
-  .hero-actions {
-    gap: 0.6rem;
-    margin-top: 1.5rem;
+  /* Process Section */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .button {
-    padding: 0.75rem 1rem;
-    font-size: clamp(0.7rem, 1.8vw, 0.72rem);
+  /* News/Blog Grid */
+  .insight-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-proof {
-    gap: 1.2rem;
-    margin-top: 2.5rem;
+  /* Portfolio Grid */
+  .project-card {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
   }
 }
 
 /* Mobile Landscape - 640px and below */
 @media (max-width: 640px) {
-  .hero {
-    min-height: 100vh;
-    padding: 5rem 4vw 3rem;
+  .container-w {
+    padding: 0 20px;
   }
 
-  .eyebrow.light {
-    font-size: 0.65rem;
-    margin-bottom: 0.8rem;
+  .section-w {
+    padding: 50px 0;
   }
 
-  .eyebrow.light span {
-    width: 1.5rem;
+  h2.section-title {
+    font-size: 28px;
   }
 
-  .hero h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
-    margin: 0.8rem 0 1rem;
+  .section-intro {
+    font-size: 16px;
   }
 
-  .hero-copy {
-    font-size: 0.9rem;
-    line-height: 1.55;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-    margin-top: 1.3rem;
-  }
-
-  .button {
+  /* Buttons */
+  .btn-w {
     width: 100%;
     justify-content: center;
-    padding: 0.85rem 1.2rem;
-    font-size: 0.74rem;
+    padding: 14px 24px;
+    font-size: 15px;
   }
 
-  .button svg {
-    width: 0.9rem;
+  /* Icon Boxes */
+  .icon-box-w {
+    width: 52px;
+    height: 52px;
   }
 
-  .hero-proof {
+  /* About Section */
+  .about-collage {
+    aspect-ratio: 1/1;
+  }
+
+  /* Services - Full width cards */
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-animated {
+    padding: 35px 20px;
+  }
+
+  /* Stats */
+  .stats-modern-grid,
+  .premium-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-card-modern,
+  .premium-stat-card {
+    padding: 35px 24px;
+  }
+
+  /* Why Choose Us */
+  .benefit-list > div {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
-    margin-top: 2rem;
+    text-align: left;
   }
 
-  .hero-proof span {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+  /* Process */
+  .process-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-proof b {
-    font-size: 1.1rem;
-    margin-bottom: 0;
-    margin-right: 0.4rem;
+  /* Testimonial */
+  .testimonial {
+    padding: 50px 24px;
+  }
+
+  blockquote {
+    font-size: 26px;
+  }
+
+  /* Feature Strip */
+  .feature-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 
 /* Small Mobile - 480px and below */
 @media (max-width: 480px) {
-  .site-header {
-    padding: 1rem 4vw;
+  .container-w {
+    padding: 0 16px;
   }
 
-  .brand-logo {
-    height: 32px;
+  .section-w {
+    padding: 40px 0;
   }
 
-  .brand-text {
-    font-size: 0.65rem;
+  h2.section-title {
+    font-size: 24px;
   }
 
-  .brand b {
-    font-size: 0.48rem;
+  .section-intro {
+    font-size: 15px;
   }
 
-  .hero {
-    padding: 4.5rem 4vw 2.5rem;
+  /* Eyebrow */
+  .eyebrow {
+    font-size: 14px;
   }
 
-  .eyebrow.light {
-    font-size: 0.6rem;
+  .eyebrow::before {
+    width: 20px;
   }
 
-  .hero h1 {
-    font-size: clamp(1.8rem, 9vw, 2.4rem);
-    line-height: 1.05;
+  /* Buttons */
+  .btn-w {
+    padding: 12px 20px;
+    font-size: 14px;
   }
 
-  .hero-copy {
-    font-size: 0.85rem;
+  /* Icon Boxes */
+  .icon-box-w {
+    width: 48px;
+    height: 48px;
   }
 
-  .button {
-    padding: 0.8rem 1rem;
-    font-size: 0.7rem;
-    min-height: 2.8rem;
+  /* Service Cards */
+  .service-card-animated {
+    padding: 30px 18px;
   }
 
-  .hero-proof {
-    font-size: 0.58rem;
+  .service-card-animated h4 {
+    font-size: 20px;
   }
 
-  .hero-proof b {
-    font-size: 1rem;
+  /* Stats */
+  .stat-icon-circle-premium {
+    width: 70px;
+    height: 70px;
+  }
+
+  .stat-number-premium,
+  .stat-number-modern {
+    font-size: 42px;
+  }
+
+  /* Testimonial */
+  .quote-mark {
+    font-size: 4rem;
+  }
+
+  blockquote {
+    font-size: 22px;
+  }
+
+  /* Process Steps */
+  .process-step h3 {
+    font-size: 20px;
+  }
+
+  .process-step p {
+    font-size: 14px;
   }
 }
 
 /* Extra Small Mobile - 360px and below */
 @media (max-width: 360px) {
-  .hero {
-    padding: 4rem 3vw 2rem;
+  .container-w {
+    padding: 0 12px;
   }
 
-  .hero h1 {
-    font-size: 1.6rem;
+  h2.section-title {
+    font-size: 22px;
   }
 
-  .hero-copy {
-    font-size: 0.8rem;
+  .btn-w {
+    padding: 11px 18px;
+    font-size: 13px;
   }
 
-  .button {
-    font-size: 0.68rem;
-    padding: 0.75rem 0.9rem;
+  .service-card-animated h4 {
+    font-size: 18px;
   }
 
-  .button svg {
-    width: 0.85rem;
+  .stat-number-premium,
+  .stat-number-modern {
+    font-size: 38px;
   }
 }
 
-/* Landscape Orientation Fixes */
+/* Landscape Mode Optimizations */
 @media (max-height: 600px) and (orientation: landscape) {
+  .section-w {
+    padding: 40px 0;
+  }
+
+  .testimonial {
+    padding: 40px 24px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn-w,
+  .button,
+  .service-card-animated,
+  .stat-card-modern,
+  .premium-stat-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Increase touch targets */
+  .btn-w,
+  .button {
+    min-height: 48px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .hover-lift:hover,
+  .service-card-animated:hover,
+  .stat-card-modern:hover,
+  .premium-stat-card:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .hero-scroll,
+  .btn-w,
+  .button,
+  .site-footer {
+    display: none;
+  }
+
   .hero {
-    min-height: 100vh;
-    padding: 3rem 5vw 2rem;
-    align-items: center;
+    min-height: auto;
+    padding: 20px;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-    margin: 0.6rem 0 0.8rem;
-  }
-
-  .hero-copy {
-    font-size: 0.9rem;
-  }
-
-  .hero-actions {
-    margin-top: 1rem;
-  }
-
-  .hero-proof {
-    margin-top: 1.5rem;
-    gap: 1rem;
+  .section-w {
+    padding: 20px 0;
+    page-break-inside: avoid;
   }
 }
