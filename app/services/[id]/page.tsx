@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { CheckCircle2, ArrowLeft } from 'lucide-react'
 import { servicesData } from '@/lib/servicesData'
-import CtaBanner from '@/components/CtaBanner'
 
 export async function generateStaticParams() {
   return servicesData.map((service) => ({
@@ -234,8 +233,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
-
-      <CtaBanner />
     </>
   )
 }

@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { MapPin, Clock, Phone } from 'lucide-react'
 import Eyebrow from '@/components/ui/Eyebrow'
 import { useInView } from '@/hooks/useCountUp'
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const skills = [
@@ -59,21 +61,30 @@ export default function WhyChooseUs() {
       }}
     >
       <div className="container-w relative z-[1]">
-        <Eyebrow centered>Why Choose Us.</Eyebrow>
-        <h2 className="section-title text-white">Trust Our Expertise</h2>
-        <p className="section-intro mx-auto text-on-dark-muted">
-          Reliable delivery, certified teams, and modern equipment come together so every metal fabrication job is handled right the first time.
-        </p>
+        <ScrollReveal variant="blur-up">
+          <Eyebrow centered>Why Choose Us.</Eyebrow>
+          <h2 className="section-title text-white">Trust Our Expertise</h2>
+          <p className="section-intro mx-auto text-on-dark-muted">
+            Reliable delivery, certified teams, and modern equipment come together so every metal fabrication job is handled right the first time.
+          </p>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-12 text-left items-start">
+          <ScrollReveal variant="fade-right" delay={0.1}>
           <div>
             <h3 className="text-white text-[22px] font-semibold mb-8">This Is Our Expertise</h3>
             {skills.map((skill, i) => (
               <SkillBar key={skill.label} {...skill} active={inView} delay={i * 100} />
             ))}
           </div>
+          </ScrollReveal>
 
-          <div className="bg-charcoal border border-border-dark rounded-[var(--radius-card)] p-8 md:p-10 shadow-[0_24px_48px_rgba(0,0,0,0.35)] lg:-mt-4 lg:translate-y-2">
+          <ScrollReveal variant="fade-left" delay={0.2}>
+          <motion.div
+            className="bg-charcoal border border-border-dark rounded-[var(--radius-card)] p-8 md:p-10 shadow-[0_24px_48px_rgba(0,0,0,0.35)] lg:-mt-4 lg:translate-y-2"
+            whileHover={{ y: -6, boxShadow: '0 32px 64px rgba(0,0,0,0.45)' }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h3 className="text-white text-[22px] font-semibold mb-3.5">We Are Always Ready To Serve</h3>
             <p className="text-sm mb-5 text-on-dark-muted">Whatever the scale of the job, our crews show up prepared, on schedule, and ready to work.</p>
             <ul className="space-y-3 mb-6">
@@ -107,7 +118,8 @@ export default function WhyChooseUs() {
                 +971 6 534 4415
               </div>
             </div>
-          </div>
+          </motion.div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

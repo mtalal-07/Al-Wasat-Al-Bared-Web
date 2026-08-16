@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Portfolio from '@/components/Portfolio'
 import PageHero from '@/components/PageHero'
-import CtaBanner from '@/components/CtaBanner'
 
 export const metadata: Metadata = {
   title: 'Projects | AL WASAT AL BARED ENG. TURNING LLC',
@@ -18,7 +17,6 @@ export default function PortfolioPage() {
         backgroundImage="/project-industrial-platforms.jpg"
       />
       <Portfolio />
-      <CtaBanner />
     </>
   )
 }

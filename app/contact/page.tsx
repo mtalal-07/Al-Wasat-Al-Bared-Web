@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Contact from '@/components/Contact'
-import CtaBanner from '@/components/CtaBanner'
 
 export const metadata: Metadata = {
   title: 'Contact | AL WASAT AL BARED ENG. TURNING LLC',
@@ -11,7 +10,6 @@ export default function ContactPage() {
   return (
     <>
       <Contact />
-      <CtaBanner />
     </>
   )
 }

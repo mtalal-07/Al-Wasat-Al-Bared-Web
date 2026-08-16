@@ -5,7 +5,6 @@ import Stats from '@/components/Stats'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import FeatureStrip from '@/components/FeatureStrip'
 import Services from '@/components/Services'
-import CtaBanner from '@/components/CtaBanner'
 import Process from '@/components/Process'
 import Testimonial from '@/components/Testimonial'
 import News from '@/components/News'
@@ -24,7 +23,6 @@ export default function Page() {
       <WhyChooseUs />
       <FeatureStrip />
       <Services />
-      <CtaBanner />
       <Process />
       <Testimonial />
       <News />

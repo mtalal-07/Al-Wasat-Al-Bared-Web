@@ -1,32 +1,43 @@
-import { Metadata } from 'next'
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRef } from 'react'
 import PageHero from '@/components/PageHero'
-import CtaBanner from '@/components/CtaBanner'
 import { servicesData } from '@/lib/servicesData'
-
-export const metadata: Metadata = {
-  title: 'Services | AL WASAT AL BARED ENG. TURNING LLC',
-  description: 'Complete metal fabrication services including steel, stainless steel, aluminium fabrication, handrails, staircases, fencing, acoustic barriers, and more.',
-}
+import { ScrollSplitCard } from '@/components/ui/scroll-split-card'
+import Eyebrow from '@/components/ui/Eyebrow'
 
 export default function ServicesPage() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
   return (
     <>
       <PageHero
         eyebrow="Our Services."
         title="Services You Can Trust"
         subtitle={`${servicesData.length} comprehensive metal fabrication solutions`}
-        backgroundImage="/service-steel-fabrication.jpg"
+        backgroundImage="/hero-bg.jpg"
       />
 
-      <section className="section-w bg-white">
+     
+
+      {/* Services Grid Section */}
+      <section className="section-w bg-steel">
         <div className="container-w">
+          <div className="text-center mb-16">
+            <Eyebrow centered>Complete Solutions</Eyebrow>
+            <h2 className="section-title">All Our Services</h2>
+            <p className="section-intro mx-auto">
+              Comprehensive metal fabrication and manufacturing services for industrial, commercial, and residential projects
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {servicesData.map((service) => (
               <article 
                 key={service.id} 
-                className="bg-white rounded-[var(--radius-card)] border border-border-light shadow-[var(--shadow-card)] overflow-hidden transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(21,23,31,0.1)] hover:border-transparent"
+                className="bg-white rounded-[var(--radius-card)] border border-border-light shadow-[var(--shadow-card)] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-card-hover)] hover:border-transparent"
               >
                 <div className="relative h-52 overflow-hidden group">
                   <Image 
@@ -38,7 +49,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="p-7">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-weld font-bold text-sm">SVC {service.num}</span>
+                    <span className="text-accent font-bold text-sm">SVC {service.num}</span>
                   </div>
                   <h4 className="font-[family-name:var(--font-display)] text-[18px] font-semibold text-heading mb-2.5 leading-[1.35]">
                     {service.title}
@@ -58,8 +69,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      <CtaBanner />
     </>
   )
 }

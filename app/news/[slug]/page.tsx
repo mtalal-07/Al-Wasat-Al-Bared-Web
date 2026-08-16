@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, User, Tag } from 'lucide-react'
 import { getNewsArticle, getAllNewsSlugs } from '@/lib/newsData'
-import CtaBanner from '@/components/CtaBanner'
 
 export async function generateStaticParams() {
   const slugs = getAllNewsSlugs()
@@ -198,8 +197,6 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </article>
-
-      <CtaBanner />
     </>
   )
 }

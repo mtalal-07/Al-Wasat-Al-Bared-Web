@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Play, Target, Shield, Handshake } from 'lucide-react'
 import PageHero from '@/components/PageHero'
-import CtaBanner from '@/components/CtaBanner'
 import '../marquee.css'
 
 export const metadata: Metadata = {
@@ -313,8 +312,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <CtaBanner />
     </>
   )
 }

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node screenshot4.js)",
+      "Bash(sed -i 's/3001/3000/' screenshot4.js)",
+      "Bash(git checkout *)"
+    ]
+  }
+}
