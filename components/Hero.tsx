@@ -27,12 +27,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span /> UAE-based metal fabrication
+           UAE-based metal fabrication
         </motion.p>
 
         <h1 className="hero-kinetic-title">
           <KineticTextReveal
-            text="Precision metalwork."
+            text="Precision metalwork"
             splitBy="words"
             direction="up"
             stagger={0.08}
@@ -41,7 +41,7 @@ export default function Hero() {
             segmentClassName="text-white"
           />
           <KineticTextReveal
-            text="Built for industry."
+            text="Built for industry"
             splitBy="words"
             direction="up"
             stagger={0.08}

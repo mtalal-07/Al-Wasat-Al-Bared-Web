@@ -790,6 +790,9 @@ h2.section-title {
 .eyebrow.light { 
   color: #bfc3bd; 
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .eyebrow.light span { 
