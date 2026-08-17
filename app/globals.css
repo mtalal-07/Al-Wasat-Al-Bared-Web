@@ -474,7 +474,7 @@ h2.section-title {
 }
 
 .icon-box-w.dark {
-  background: var(--color-dark);
+  background: #8B1A1A;
   color: var(--color-accent);
 }
 

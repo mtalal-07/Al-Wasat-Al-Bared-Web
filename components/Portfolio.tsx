@@ -167,10 +167,9 @@ export default function Portfolio() {
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Text Content */}
                   <div 
-                    className={`project-text bg-[#D4B896] text-white p-12 md:p-16 lg:min-h-[400px] flex flex-col justify-center relative z-10 ${
-                      isEven ? 'lg:order-1' : 'lg:order-2'
+                    className={`project-text text-white p-12 md:p-16 lg:min-h-[400px] flex flex-col justify-center relative z-10 ${
+                      isEven ? 'lg:order-1 bg-[#D4B896]' : 'lg:order-2 bg-[#8B1A1A]'
                     }`}
-                    style={{ backgroundColor: '#D4B896' }}
                   >
                     <div className="max-w-md">
                       <h3 className="text-3xl md:text-4xl font-bold mb-4 uppercase leading-tight text-white">
