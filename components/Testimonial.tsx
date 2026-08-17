@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Star, ChevronLeft, ChevronRight, User } from 'lucide-react'
 import { KineticTextReveal } from '@/components/ui/kinetic-text-reveal'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Testimonial() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
   const testimonials = [
     {
@@ -190,7 +191,7 @@ export default function Testimonial() {
     <section className="section-w bg-[#F8F9FA]">
       <div className="container-w">
         <ScrollReveal variant="blur-up" className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
             <KineticTextReveal
               text="Read reviews,"
               splitBy="words"
@@ -211,72 +212,52 @@ export default function Testimonial() {
           </h2>
 
           <motion.div
-            className="flex items-center justify-center gap-6 mb-4"
+            className="flex items-center justify-center gap-4 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <div className="text-4xl font-bold text-heading">4.8/5</div>
+            <div className="text-3xl font-bold text-heading">4.8/5</div>
             <div className="flex items-center gap-2">
-              <Star className="text-weld fill-weld" size={32} />
-              <span className="text-2xl font-bold text-heading">Trustpilot</span>
+              <Star className="text-weld fill-weld" size={28} />
+              <span className="text-xl font-bold text-heading">Trustpilot</span>
             </div>
           </motion.div>
-          <p className="text-body text-lg">Based on 5210 reviews</p>
         </ScrollReveal>
 
-        {/* Bottom Section - Left Text + Right Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <ScrollReveal variant="fade-right" className="lg:col-span-4">
-            <div className="mb-0">
-              <span className="text-[140px] leading-none text-gray-300 font-serif">&ldquo;</span>
-            </div>
-
-            <h3 className="text-3xl text-heading mb-12">
-              What our customers are saying
-            </h3>
-
-            <div className="flex items-center gap-4">
-              <motion.button
-                onClick={prevSlide}
-                className="w-14 h-14 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-heading hover:bg-heading hover:text-white transition-all"
-                aria-label="Previous testimonial"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ChevronLeft size={24} />
-              </motion.button>
-              <div className="flex-1 h-0.5 bg-gray-300 relative">
-                <div 
-                  className="absolute left-0 top-0 h-full bg-heading transition-all duration-300"
-                  style={{ width: `${((currentSlide + 1) / testimonials.length) * 100}%` }}
-                />
-              </div>
-              <motion.button
-                onClick={nextSlide}
-                className="w-14 h-14 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-heading hover:bg-heading hover:text-white transition-all"
-                aria-label="Next testimonial"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ChevronRight size={24} />
-              </motion.button>
-            </div>
-          </ScrollReveal>
-
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <AnimatePresence mode="popLayout">
-              {visibleTestimonials.map((testimonial, index) => (
+        {/* Full Width Testimonials */}
+        <div className="w-full">
+          {/* Marquee Container */}
+          <div 
+            className="testimonial-marquee-container"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <motion.div 
+              className="testimonial-marquee-track"
+              animate={{
+                x: [0, -100 * testimonials.length * 0.5]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: testimonials.length * 5,
+                  ease: "linear",
+                },
+              }}
+              style={{
+                animationPlayState: isPaused ? 'paused' : 'running'
+              }}
+            >
+              {/* Duplicate testimonials for seamless loop */}
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
                 <motion.article
-                  key={`${testimonial.id}-${currentSlide}-${index}`}
-                  className="bg-white rounded-xl p-6 shadow-sm flex flex-col"
-                  initial={{ opacity: 0, y: 24, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -16, scale: 0.96 }}
-                  transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  whileHover={{ y: -6, boxShadow: '0 16px 32px rgba(21,23,31,0.1)' }}
+                  key={`marquee-${testimonial.id}-${index}`}
+                  className="testimonial-marquee-card bg-white rounded-xl p-6 shadow-sm flex flex-col"
+                  whileHover={{ y: -6, boxShadow: '0 16px 32px rgba(21,23,31,0.1)', scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {/* Testimonial Text */}
                   <p className="text-gray-600 text-[15px] leading-relaxed mb-6 flex-grow line-clamp-4">
@@ -307,8 +288,7 @@ export default function Testimonial() {
                   </div>
                 </motion.article>
               ))}
-              </AnimatePresence>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
