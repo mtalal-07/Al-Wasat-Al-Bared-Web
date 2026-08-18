@@ -35,14 +35,14 @@ export default function FeatureStrip() {
               <motion.div
                 className={`rounded-[var(--radius-card)] px-8 py-10 md:px-10 md:py-10 flex flex-row items-start gap-5 min-h-[140px] cursor-default ${
                   variant === 'yellow'
-                    ? 'bg-weld'
+                    ? 'text-white shadow-[var(--shadow-card)]'
                     : variant === 'navy'
                       ? 'text-white shadow-[var(--shadow-card)]'
                       : variant === 'dark'
                         ? 'bg-iron'
                         : 'bg-white shadow-[var(--shadow-card)]'
                 }`}
-                style={variant === 'navy' ? { backgroundColor: '#2A2F7A' } : {}}
+                style={variant === 'yellow' ? { backgroundColor: '#F6A821' } : variant === 'navy' ? { backgroundColor: '#2A2F7A' } : {}}
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -60,14 +60,14 @@ export default function FeatureStrip() {
                 <div className="min-w-0 flex-1">
                   <h4
                     className={`font-[family-name:var(--font-display)] text-[19px] md:text-[20px] font-semibold mb-2 leading-[1.35] ${
-                      variant === 'yellow' ? 'text-iron' : variant === 'navy' ? 'text-white' : variant === 'dark' ? 'text-white' : 'text-heading'
+                      variant === 'yellow' ? 'text-white' : variant === 'navy' ? 'text-white' : variant === 'dark' ? 'text-white' : 'text-heading'
                     }`}
                   >
                     {title}
                   </h4>
                   <p
                     className={`font-[family-name:var(--font-body)] text-[14px] leading-[1.7] ${
-                      variant === 'yellow' ? 'text-iron/70' : variant === 'navy' ? 'text-white/90' : variant === 'dark' ? 'text-on-dark-muted' : 'text-body'
+                      variant === 'yellow' ? 'text-white/90' : variant === 'navy' ? 'text-white/90' : variant === 'dark' ? 'text-on-dark-muted' : 'text-body'
                     }`}
                   >
                     {description}

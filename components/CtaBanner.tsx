@@ -1,28 +1,21 @@
 import { Phone } from 'lucide-react'
-import Eyebrow from '@/components/ui/Eyebrow'
 
 export default function CtaBanner() {
   return (
-    <section
-      className="relative text-white text-center py-16 md:py-20 bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage:
-          'linear-gradient(120deg, rgba(21,23,31,0.93), rgba(21,23,31,0.7)), url(/cta2.jpg)',
-      }}
-    >
+    <section className="py-6">
       <div className="container-w">
-        <Eyebrow centered className="justify-center">We&apos;re Ready Anytime.</Eyebrow>
-        <h2 className="section-title text-white max-w-[700px] mx-auto">
-          Always On Standby, Any Time You Call
-        </h2>
-        <p className="max-w-[560px] mx-auto mb-8 text-on-dark-muted">
-          Urgent repair or unplanned downtime — our emergency crews are one call away, day or night.
-        </p>
-        <a href="tel:+97165344415" className="btn-w btn-primary-w inline-flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-dark flex items-center justify-center">
-            <Phone size={16} />
+        <a 
+          href="tel:+97165344415" 
+          className="block rounded-2xl p-6 flex items-center justify-between cursor-pointer hover:opacity-90 transition-opacity" 
+          style={{ backgroundColor: '#F6A821' }}
+        >
+          <div className="flex flex-col">
+            <span className="text-sm font-medium text-gray-800">Call us today</span>
+            <span className="text-xl font-bold text-gray-900">+971 6 534 4415</span>
           </div>
-          +971 6 534 4415
+          <div className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center">
+            <Phone size={20} className="text-white" />
+          </div>
         </a>
       </div>
     </section>

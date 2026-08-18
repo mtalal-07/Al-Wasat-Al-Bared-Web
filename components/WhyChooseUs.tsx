@@ -35,12 +35,12 @@ function SkillBar({ label, pct, active, delay }: { label: string; pct: number; a
     <div className="mb-6">
       <div className="flex justify-between font-[family-name:var(--font-display)] font-semibold text-white text-[15px] mb-2.5">
         {label}
-        <span style={{ color: '#2A2F7A' }}>{pct}%</span>
+        <span style={{ color: '#F6A821' }}>{pct}%</span>
       </div>
       <div className="h-1.5 bg-border-dark rounded-full overflow-hidden">
         <div
-          className="h-full bg-weld rounded-full transition-all duration-[1.2s] ease-out"
-          style={{ width: `${width}%` }}
+          className="h-full rounded-full transition-all duration-[1.2s] ease-out"
+          style={{ width: `${width}%`, backgroundColor: '#2A2F7A' }}
         />
       </div>
     </div>
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
       className="relative text-white section-w center-text pb-32 md:pb-40 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          'linear-gradient(120deg, rgba(21,23,31,0.93) 0%, rgba(21,23,31,0.82) 100%), url(/hero-bg.jpg)',
+          'linear-gradient(120deg, rgba(21,23,31,0.93) 0%, rgba(21,23,31,0.82) 100%), url("/Why%20choose%20us2.jpg")',
       }}
     >
       <div className="container-w relative z-[1]">
@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
           <Eyebrow centered>Why Choose Us.</Eyebrow>
           <h2 className="section-title text-white">Trust Our Expertise</h2>
           <p className="section-intro mx-auto text-on-dark-muted">
-            Reliable delivery, certified teams, and modern equipment come together so every metal fabrication job is handled right the first time.
+            Reliable Delivery, Certified Teams, And Modern Equipment Come Together So Every Metal Fabrication Job Is Handled Right The First Time.
           </p>
         </ScrollReveal>
 
@@ -80,7 +80,8 @@ export default function WhyChooseUs() {
 
           <ScrollReveal variant="fade-left" delay={0.2}>
           <motion.div
-            className="bg-charcoal border border-border-dark rounded-[var(--radius-card)] p-8 md:p-10 shadow-[0_24px_48px_rgba(0,0,0,0.35)] lg:-mt-4 lg:translate-y-2"
+            className="border border-border-dark rounded-[var(--radius-card)] p-8 md:p-10 shadow-[0_24px_48px_rgba(0,0,0,0.35)] lg:-mt-4 lg:translate-y-2"
+            style={{ backgroundColor: '#2A2F7A' }}
             whileHover={{ y: -6, boxShadow: '0 32px 64px rgba(0,0,0,0.45)' }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >

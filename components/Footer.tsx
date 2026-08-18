@@ -36,7 +36,7 @@ export default function Footer() {
               AL WASAT
             </div>
             <p className="leading-relaxed mb-5">
-              Certified metal fabrication, turning, and engineering services for industrial, commercial, and residential projects across the UAE since 2016.
+              Certified Metal Fabrication, Turning, And Engineering Services For Industrial, Commercial, And Residential Projects Across The UAE Since 2016.
             </p>
             <div className="flex gap-3">
               {socialLinks.map(({ href, label, text }) => (
@@ -44,7 +44,8 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-8 h-8 border border-border-dark rounded-full flex items-center justify-center text-white text-[11px] font-semibold hover:border-weld hover:text-weld transition-colors"
+                  className="social-icon-no-hover w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-semibold"
+                  style={{ backgroundColor: '#2A2F7A', color: '#ffffff', border: 'none' }}
                 >
                   {text}
                 </a>
@@ -93,7 +94,7 @@ export default function Footer() {
                 Sat - Thu : 8:00 am - 5:00 pm
               </li>
             </ul>
-            <div className="flex items-center gap-3 bg-charcoal rounded-[var(--radius-card)] p-3.5 mt-4">
+            <a href="tel:+97165344415" className="flex items-center gap-3 bg-charcoal rounded-[var(--radius-card)] p-3.5 mt-4 cursor-pointer hover:opacity-90 transition-opacity">
               <div className="icon-box-w yellow w-9 h-9">
                 <Phone size={15} />
               </div>
@@ -101,7 +102,7 @@ export default function Footer() {
                 <span className="text-xs block">Call Us Today</span>
                 <strong className="text-white text-[15px] block">+971 6 534 4415</strong>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 

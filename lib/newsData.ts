@@ -124,7 +124,7 @@ Laser cutting technology continues to advance, offering increasingly precise and
   {
     id: '3',
     slug: 'manufacturing-steel-door',
-    title: 'Manufacturing The Steel Door',
+    title: 'Manufacturing Steel Door',
     category: 'Fabrication',
     excerpt: 'Learn about the process and techniques involved in manufacturing high-quality steel doors.',
     content: `

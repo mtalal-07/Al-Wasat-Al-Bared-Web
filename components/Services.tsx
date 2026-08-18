@@ -48,7 +48,7 @@ function ServiceCard({
 }: (typeof services)[0]) {
   return (
     <motion.article
-      className="relative bg-white rounded-[var(--radius-card)] border border-border-light shadow-[var(--shadow-card)] pt-12 pb-9 px-7 text-center h-full"
+      className="relative bg-white rounded-[var(--radius-card)] border border-border-light shadow-[var(--shadow-card)] pt-12 pb-8 px-7 text-center h-full flex flex-col"
       whileHover={cardHover}
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -65,10 +65,13 @@ function ServiceCard({
       <h4 className="font-[family-name:var(--font-display)] text-[22px] font-semibold text-heading mb-2.5 leading-[1.35]">
         {title}
       </h4>
-      <p className="font-[family-name:var(--font-body)] text-[14px] text-body leading-[1.7] mb-5 max-w-[280px] mx-auto">
+      <p className="font-[family-name:var(--font-body)] text-[14px] text-body leading-[1.7] mb-6 max-w-[280px] mx-auto flex-grow">
         {description}
       </p>
-      <span className="read-more-w text-[14px] font-semibold">Read More</span>
+      <span className="btn-w btn-primary-w inline-flex items-center justify-center gap-2 group/btn mt-auto cursor-pointer w-full" style={{ fontSize: '14px', padding: '12px 20px' }}>
+        Read More
+        <ArrowRight size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
+      </span>
     </motion.article>
   )
 }

@@ -1,8 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, ArrowDownRight, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { KineticTextReveal } from '@/components/ui/kinetic-text-reveal'
 
@@ -10,29 +9,20 @@ export default function Hero() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section className="hero" id="top">
+    <section className="hero hero-centered" id="top">
       <Image
         className="hero-image"
-        src="/hero3.png"
+        src="/hero1.png"
         alt="Metal worker welding in a fabrication workshop"
         fill
         priority
         sizes="100vw"
       />
       <div className="hero-overlay" />
-      <div className="hero-content">
-        <motion.p
-          className="eyebrow light"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        >
-           UAE-based metal fabrication
-        </motion.p>
-
-        <h1 className="hero-kinetic-title">
+      <div className="hero-content hero-content-centered">
+        <h1 className="hero-kinetic-title hero-title-centered">
           <KineticTextReveal
-            text="Precision metalwork"
+            text="Precision Metalwork"
             splitBy="words"
             direction="up"
             stagger={0.08}
@@ -40,50 +30,27 @@ export default function Hero() {
             className="block text-white"
             segmentClassName="text-white"
           />
-          <KineticTextReveal
-            text="Built for industry"
-            splitBy="words"
-            direction="up"
-            stagger={0.08}
-            delay={0.65}
-            className="block text-weld mt-1"
-            segmentClassName="text-weld not-italic"
-          />
+          <div className="liquid-text hero-main-text" data-text="Built For Industry">
+            <KineticTextReveal
+              text="Built For Industry"
+              splitBy="words"
+              direction="up"
+              stagger={0.08}
+              delay={0.65}
+              className="block text-navy-blue mt-1 liquid-text-base"
+              segmentClassName="text-navy-blue not-italic"
+            />
+          </div>
         </h1>
 
         <motion.p
-          className="hero-copy"
+          className="hero-copy hero-copy-centered"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          From first sketch to final installation, we make metal work harder, last longer, and look considered.
+          From First Sketch To Final Installation, We Make Metal Work Harder, Last Longer, And Look Considered.
         </motion.p>
-
-        <motion.div
-          className="hero-actions"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 1.25, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <Link className="button button-accent" href="#quote">
-            Request a quote <ArrowRight />
-          </Link>
-          <Link className="button button-ghost" href="/portfolio">
-            Explore our work <ArrowDownRight />
-          </Link>
-        </motion.div>
-
-        <motion.div
-          className="hero-proof"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 1.45, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <span><b style={{ color: '#2A2F7A' }}>2016</b> established</span>
-          <span><b style={{ color: '#2A2F7A' }}>UAE</b> based</span>
-          <span><b style={{ color: '#2A2F7A' }}>100</b> trusted partners</span>
-        </motion.div>
       </div>
 
       <motion.div
@@ -92,7 +59,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.8 }}
       >
-        <span>Scroll to explore</span>
+        
         <motion.div
           animate={shouldReduceMotion ? {} : { y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
