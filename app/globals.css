@@ -993,6 +993,9 @@ footer a:hover {
 
 .hero-title-centered {
   text-align: center;
+  font-size: clamp(42px, 11vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -1.5px;
 }
 
 .hero-copy-centered {
@@ -1012,11 +1015,11 @@ footer a:hover {
   filter: saturate(.55); 
 }
 
-.hero-overlay { 
-  position: absolute; 
-  inset: 0; 
-  z-index: -1; 
-  background: linear-gradient(90deg, #111513e8 0%, #11151399 47%, #11151325 100%), linear-gradient(0deg, #1115139c, transparent 45%); 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(10, 15, 20, 0.35) 0%, rgba(10, 15, 20, 0.55) 45%, rgba(10, 15, 20, 0.92) 100%);
 }
 
 .hero-content { 
