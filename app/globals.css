@@ -163,7 +163,7 @@
   @media (max-width: 768px) {
     body {
       font-size: 16px;
-      padding-top: 90px;
+      padding-top: 55px;
     }
     h1 {
       font-size: 36px;
@@ -795,6 +795,25 @@ footer a:hover {
   margin-left: auto;
 }
 
+@media (max-width: 850px) {
+  .nav-links-modern {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #ffffff;
+    border-top: 1px solid #E7E7EC;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    z-index: 1000;
+    max-height: calc(100vh - 55px);
+    overflow-y: auto;
+  }
+}
+
 .nav-link {
   font-family: var(--font-display);
   font-size: 15px;
@@ -846,12 +865,12 @@ footer a:hover {
 
 @media (max-width: 850px) {
   .header-top-bar {
-    padding: 6px 0;
-    font-size: 12px;
+    padding: 2px 0;
+    font-size: 10px;
   }
   
   .contact-info {
-    gap: 15px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -861,15 +880,19 @@ footer a:hover {
   }
   
   .brand-logo-modern {
-    height: 42px;
+    height: 32px;
   }
   
   .brand-name {
-    font-size: 16px;
+    font-size: 13px;
   }
   
   .brand-subtitle {
-    font-size: 11px;
+    font-size: 9px;
+  }
+  
+  .header-main {
+    padding: 8px 0;
   }
   
   .menu-button-modern {
@@ -878,7 +901,7 @@ footer a:hover {
   
   .nav-links-modern {
     position: fixed;
-    top: 100%;
+    top: 55px;
     left: 0;
     right: 0;
     display: none;
@@ -888,17 +911,21 @@ footer a:hover {
     border-top: 1px solid #E7E7EC;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 0;
+    z-index: 1000;
+    max-height: calc(100vh - 55px);
+    overflow-y: auto;
   }
   
   .nav-links-modern.is-open {
-    display: flex;
+    display: flex !important;
   }
   
   .nav-link {
-    padding: 18px 24px;
+    padding: 14px 20px;
     border-bottom: 1px solid #F6F6F8;
     width: 100%;
     display: block;
+    font-size: 14px;
   }
   
   .nav-link:last-child {
@@ -908,19 +935,20 @@ footer a:hover {
 
 @media (max-width: 640px) {
   .header-top-bar {
-    font-size: 11px;
+    font-size: 10px;
+    padding: 3px 0;
   }
   
   .contact-info {
-    gap: 12px;
+    gap: 8px;
   }
   
   .contact-item {
-    gap: 4px;
+    gap: 3px;
   }
   
   .contact-item span {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .brand-text-modern {
@@ -928,7 +956,7 @@ footer a:hover {
   }
   
   .header-main {
-    padding: 12px 0;
+    padding: 10px 0;
   }
 }
 
@@ -1140,7 +1168,7 @@ footer a:hover {
 @media (max-width: 850px) { 
   .hero { 
     min-height: 100svh; 
-    padding: 120px 5vw 4rem; 
+    padding: 60px 4vw 2rem; 
   }
   
   .hero-centered {
@@ -1149,12 +1177,47 @@ footer a:hover {
   }
   
   .hero-content-centered {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .hero-main-text {
+    font-size: clamp(1.6rem, 4.2vw, 2.8rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.8rem, 1.5vw, 1rem) !important;
+    margin-top: 1rem !important;
+    line-height: 1.4 !important;
   }
   
   .hero-scroll { 
     display: none; 
   } 
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 3vw 2rem;
+    min-height: calc(100svh - 60px);
+  }
+  
+  .hero-content-centered {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-main-text {
+    font-size: clamp(1.4rem, 3.8vw, 2.4rem) !important;
+    line-height: 1.05 !important;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    margin-top: 0.8rem !important;
+    max-width: 90% !important;
+  }
 }
 
 
