@@ -16,7 +16,7 @@ const services = [
   },
   {
     icon: Shield,
-    iconVariant: 'dark' as const,
+    iconVariant: 'navy' as const,
     title: 'Handrails & Railings',
     description: 'Safety-first railing systems designed for compliance and durability.',
   },
@@ -28,7 +28,7 @@ const services = [
   },
   {
     icon: Hammer,
-    iconVariant: 'dark' as const,
+    iconVariant: 'navy' as const,
     title: 'Acoustic Barriers',
     description: 'High-precision machine turning for cylindrical components and custom parts.',
   },
@@ -54,8 +54,9 @@ function ServiceCard({
     >
       <motion.div
         className={`absolute -top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] rounded-[var(--radius-chip)] flex items-center justify-center shadow-[0_8px_20px_rgba(21,23,31,0.12)] z-10 ${
-          iconVariant === 'yellow' ? 'bg-weld text-iron' : 'bg-iron text-weld'
+          iconVariant === 'yellow' ? 'bg-weld text-iron' : iconVariant === 'navy' ? 'text-white' : 'bg-iron text-weld'
         }`}
+        style={iconVariant === 'navy' ? { backgroundColor: '#2A2F7A' } : {}}
         whileHover={{ scale: 1.08, rotate: 4 }}
         transition={{ duration: 0.3 }}
       >

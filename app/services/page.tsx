@@ -49,7 +49,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="p-7">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="font-bold text-sm" style={{ color: '#8B1A1A' }}>SVC {service.num}</span>
+                    <span className="font-bold text-sm" style={{ color: '#EE0000' }}>SVC {service.num}</span>
                   </div>
                   <h4 className="font-[family-name:var(--font-display)] text-[18px] font-semibold text-heading mb-2.5 leading-[1.35]">
                     {service.title}
@@ -59,7 +59,8 @@ export default function ServicesPage() {
                   </p>
                   <Link 
                     href={`/services/${service.id}`}
-                    className="read-more-w"
+                    className="font-semibold text-[14px] inline-flex items-center gap-1.5 px-5 py-2.5 rounded-[4px] transition-all hover:opacity-90"
+                    style={{ backgroundColor: '#2A2F7A', color: '#ffffff' }}
                   >
                     View Details →
                   </Link>

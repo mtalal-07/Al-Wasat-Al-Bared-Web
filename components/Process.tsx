@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 const steps = [
   {
     icon: Building2,
-    variant: 'dark' as const,
+    variant: 'navy' as const,
     title: 'Select Your Services',
     description: 'Tell us what kind of metal fabrication or aluminium work you need.',
   },
@@ -22,7 +22,7 @@ const steps = [
   },
   {
     icon: CreditCard,
-    variant: 'dark' as const,
+    variant: 'navy' as const,
     title: 'Make Payment',
     description: 'Transparent, itemized quotes with flexible payment options.',
   },
@@ -106,7 +106,7 @@ export default function Process() {
                     >
                       <motion.div
                         className={`icon-box-w w-[52px] h-[52px] shrink-0 relative z-[1] ${
-                          step.variant === 'yellow' ? 'yellow' : 'dark'
+                          step.variant === 'yellow' ? 'yellow' : step.variant === 'navy' ? 'navy' : 'dark'
                         }`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ duration: 0.3 }}

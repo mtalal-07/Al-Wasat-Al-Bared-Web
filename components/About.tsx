@@ -81,7 +81,7 @@ export default function About() {
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-[52px] h-[52px] shrink-0 rounded-[var(--radius-chip)] border-2 border-iron flex items-center justify-center text-iron transition-all duration-300 group-hover:bg-iron group-hover:text-weld group-hover:scale-110">
+                    <div className="icon-box-w navy w-[52px] h-[52px] shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <HardHat size={22} />
                     </div>
                     <div>

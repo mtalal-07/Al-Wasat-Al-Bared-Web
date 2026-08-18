@@ -35,7 +35,7 @@ function SkillBar({ label, pct, active, delay }: { label: string; pct: number; a
     <div className="mb-6">
       <div className="flex justify-between font-[family-name:var(--font-display)] font-semibold text-white text-[15px] mb-2.5">
         {label}
-        <span className="text-weld">{pct}%</span>
+        <span style={{ color: '#2A2F7A' }}>{pct}%</span>
       </div>
       <div className="h-1.5 bg-border-dark rounded-full overflow-hidden">
         <div

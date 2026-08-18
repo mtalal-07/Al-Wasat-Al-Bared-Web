@@ -24,7 +24,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-[#0F1015] text-on-dark-muted text-sm pt-20">
+    <footer className="text-on-dark-muted text-sm pt-20" style={{ backgroundColor: '#4B5563' }}>
       <div className="container-w">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-10 pb-16 border-b border-border-dark">
           {/* About */}
@@ -58,7 +58,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-weld transition-colors">
+                  <Link href={link.href} className="transition-colors hover:text-[#2A2F7A]">
                     {link.label}
                   </Link>
                 </li>
@@ -85,11 +85,11 @@ export default function Footer() {
             <h4 className="text-white text-base font-semibold mb-5">Contact Info</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-weld flex-shrink-0 mt-0.5" />
+                <MapPin size={16} className="flex-shrink-0 mt-0.5" style={{ color: '#2A2F7A' }} />
                 Shed # 22, Industrial Area # 1, Sajja, Sharjah, UAE
               </li>
               <li className="flex items-start gap-2">
-                <Clock size={16} className="text-weld flex-shrink-0 mt-0.5" />
+                <Clock size={16} className="flex-shrink-0 mt-0.5" style={{ color: '#2A2F7A' }} />
                 Sat - Thu : 8:00 am - 5:00 pm
               </li>
             </ul>

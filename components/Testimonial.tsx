@@ -220,7 +220,7 @@ export default function Testimonial() {
           >
             <div className="text-3xl font-bold text-heading">4.8/5</div>
             <div className="flex items-center gap-2">
-              <Star className="text-weld fill-weld" size={28} />
+              <Star size={28} style={{ color: '#2A2F7A', fill: '#2A2F7A' }} />
               <span className="text-xl font-bold text-heading">Trustpilot</span>
             </div>
           </motion.div>
@@ -269,7 +269,7 @@ export default function Testimonial() {
                     {/* Star Rating */}
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} size={16} className="text-weld fill-weld" />
+                        <Star key={i} size={16} style={{ color: '#2A2F7A', fill: '#2A2F7A' }} />
                       ))}
                     </div>
 

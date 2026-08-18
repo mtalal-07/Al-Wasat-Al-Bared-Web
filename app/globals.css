@@ -10,6 +10,8 @@
   --font-mono: var(--font-poppins);
   --color-weld: #F6A821;
   --color-weld-dark: #DD8F0F;
+  --color-navy-blue: #2A2F7A;
+  --color-bright-red: #EE0000;
   --color-iron: #15171F;
   --color-charcoal: #1E212C;
   --color-steel: #F6F6F8;
@@ -269,7 +271,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-accent);
+  color: #EE0000;
   font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
@@ -282,7 +284,7 @@
   content: "";
   width: 24px;
   height: 2px;
-  background: var(--color-accent);
+  background: #EE0000;
   display: inline-block;
 }
 
@@ -353,7 +355,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-accent);
+  color: #EE0000;
   font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
@@ -366,9 +368,17 @@
   content: '';
   width: 24px;
   height: 2px;
-  background: var(--color-accent);
+  background: #EE0000;
   display: inline-block;
   flex-shrink: 0;
+}
+
+.eyebrow.blue-variant {
+  color: #2A2F7A;
+}
+
+.eyebrow.blue-variant::before {
+  background: #2A2F7A;
 }
 
 .eyebrow.center {
@@ -418,12 +428,12 @@ h2.section-title {
 }
 
 .btn-primary-w {
-  background: var(--color-accent);
-  color: var(--color-dark);
+  background: #2A2F7A;
+  color: #ffffff;
 }
 
 .btn-primary-w:hover {
-  background: var(--color-accent-dark);
+  background: #1e2456;
 }
 
 .btn-outline-light-w {
@@ -476,6 +486,21 @@ h2.section-title {
 .icon-box-w.dark {
   background: #8B1A1A;
   color: var(--color-accent);
+}
+
+.icon-box-w.navy {
+  background: #2A2F7A;
+  color: #fff;
+}
+
+/* Footer hover effects */
+footer a:hover {
+  color: #2A2F7A !important;
+}
+
+/* Featured News Card Hover */
+.featured-news-card:hover .featured-news-title {
+  color: #F6A821 !important;
 }
 
 /* Overlay */
@@ -788,7 +813,7 @@ h2.section-title {
 }
 
 .eyebrow.light { 
-  color: #bfc3bd; 
+  color: #EE0000; 
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -799,7 +824,7 @@ h2.section-title {
   display: inline-block; 
   width: 2rem; 
   height: 2px; 
-  background: var(--color-accent); 
+  background: #ffffff; 
   flex-shrink: 0;
 }
 

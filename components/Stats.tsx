@@ -25,12 +25,12 @@ function StatItem({
 
   return (
     <>
-      <div className="w-[50px] h-[50px] border-[1.5px] rounded-full flex items-center justify-center mx-auto mb-4" style={{ borderColor: '#8B1A1A', color: '#8B1A1A' }}>
+      <div className="w-[50px] h-[50px] border-[1.5px] rounded-full flex items-center justify-center mx-auto mb-4" style={{ borderColor: '#2A2F7A', color: '#2A2F7A' }}>
         <Icon size={20} strokeWidth={1.75} />
       </div>
-      <div className="font-[family-name:var(--font-display)] font-bold text-[32px] md:text-[42px] text-heading leading-none">
+      <div className="font-[family-name:var(--font-display)] font-bold text-[32px] md:text-[42px] leading-none" style={{ color: '#2A2F7A' }}>
         {count}
-        <span className="text-[22px] align-top" style={{ color: '#8B1A1A' }}>+</span>
+        <span className="text-[22px] align-top">+</span>
       </div>
       <div className="text-sm text-body mt-1.5">{label}</div>
     </>

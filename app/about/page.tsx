@@ -27,8 +27,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
             {/* Left Text Column */}
             <div>
-              <div className="flex items-center gap-2.5 text-weld font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5">
-                <span className="w-5 h-0.5 bg-weld inline-block"></span>
+              <div className="flex items-center gap-2.5 font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5" style={{ color: '#EE0000' }}>
+                <span className="w-5 h-0.5 inline-block" style={{ backgroundColor: '#EE0000' }}></span>
                 About Us
               </div>
               <h2 className="font-display text-[32px] font-bold text-heading leading-[1.3] mb-[22px] max-w-[440px]">
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 From single-site repairs to full structural builds, our crews are trained to deliver precise, on-schedule work that holds up under real industrial load. Our integrated approach to engineering, fabrication, and installation ensures comprehensive solutions and value-added services.
               </p>
               <div className="flex items-center gap-5">
-                <Link href="/contact" className="inline-flex items-center gap-2.5 px-[30px] py-4 bg-weld text-dark font-display font-semibold text-[14px] rounded-[4px] hover:bg-[#DD8F0F] transition-all">
+                <Link href="/contact" className="inline-flex items-center gap-2.5 px-[30px] py-4 font-display font-semibold text-[14px] rounded-[4px] transition-all" style={{ backgroundColor: '#2A2F7A', color: '#ffffff' }}>
                   Contact Us
                 </Link>
                 <button className="w-12 h-12 rounded-full bg-dark text-weld flex items-center justify-center hover:bg-heading transition-all">
@@ -54,8 +54,8 @@ export default function AboutPage() {
 
             {/* Right Image Column */}
             <div className="relative">
-              <div className="absolute left-[-1px] top-0 bottom-0 w-[52px] bg-weld text-dark flex items-center justify-center font-display font-bold text-[13px] tracking-[0.5px] rounded-l-[8px]"
-                style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+              <div className="absolute left-[-1px] top-0 bottom-0 w-[52px] flex items-center justify-center font-display font-bold text-[13px] tracking-[0.5px] rounded-l-[8px]"
+                style={{ backgroundColor: '#2A2F7A', color: '#ffffff', writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                 8+ YEARS OF EXPERIENCE
               </div>
               <div className="pl-[52px]">
@@ -76,8 +76,8 @@ export default function AboutPage() {
       <section className="bg-white py-[100px]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="flex items-center gap-2.5 text-weld font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5 justify-center">
-              <span className="w-5 h-0.5 bg-weld inline-block"></span>
+            <div className="flex items-center gap-2.5 font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5 justify-center" style={{ color: '#EE0000' }}>
+              <span className="w-5 h-0.5 inline-block" style={{ backgroundColor: '#EE0000' }}></span>
               Our Commitment
             </div>
             <h2 className="font-display text-[32px] font-bold text-heading leading-[1.3] mb-[22px]">
@@ -150,8 +150,8 @@ export default function AboutPage() {
 
             {/* Content Column */}
             <div className="p-14 relative">
-              <div className="flex items-center gap-2.5 text-weld font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5">
-                <span className="w-5 h-0.5 bg-weld inline-block"></span>
+              <div className="flex items-center gap-2.5 font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5" style={{ color: '#EE0000' }}>
+                <span className="w-5 h-0.5 inline-block" style={{ backgroundColor: '#EE0000' }}></span>
                 Why Choose Us
               </div>
               <h2 className="font-display text-[28px] font-bold text-heading leading-[1.3] mb-[18px] max-w-[440px]">
@@ -180,7 +180,7 @@ export default function AboutPage() {
                   <span>99%</span>
                 </div>
                 <div className="h-1.5 bg-[#E7E7EC] rounded overflow-hidden">
-                  <div className="h-full bg-weld rounded" style={{ width: '99%' }}></div>
+                  <div className="h-full rounded" style={{ width: '99%', backgroundColor: '#2A2F7A' }}></div>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ export default function AboutPage() {
                   <span>97%</span>
                 </div>
                 <div className="h-1.5 bg-[#E7E7EC] rounded overflow-hidden">
-                  <div className="h-full bg-weld rounded" style={{ width: '97%' }}></div>
+                  <div className="h-full rounded" style={{ width: '97%', backgroundColor: '#2A2F7A' }}></div>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
             {/* Image Column */}
             <div className="relative">
-              <div className="absolute w-[90px] h-[90px] bg-weld bottom-[-20px] right-[-20px] rounded-[6px] -z-10"></div>
+              <div className="absolute w-[90px] h-[90px] bottom-[-20px] right-[-20px] rounded-[6px] -z-10" style={{ backgroundColor: '#2A2F7A' }}></div>
               <Image
                 src="/cnc-turning-service-scaled.jpeg"
                 alt="Steel workshop"
@@ -216,8 +216,8 @@ export default function AboutPage() {
 
             {/* Text Column */}
             <div>
-              <div className="flex items-center gap-2.5 text-weld font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5">
-                <span className="w-5 h-0.5 bg-weld inline-block"></span>
+              <div className="flex items-center gap-2.5 font-display font-semibold uppercase text-[13px] tracking-[1.5px] mb-3.5" style={{ color: '#EE0000' }}>
+                <span className="w-5 h-0.5 inline-block" style={{ backgroundColor: '#EE0000' }}></span>
                 Our Vision
               </div>
               <h2 className="font-display text-[32px] font-bold text-heading leading-[1.3] mb-[18px] max-w-[440px]">

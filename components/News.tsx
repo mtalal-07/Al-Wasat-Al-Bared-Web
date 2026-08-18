@@ -39,13 +39,13 @@ export default function News() {
                       />
                     </div>
                     <div className="p-5">
-                      <span className="text-weld text-xs font-[family-name:var(--font-display)] uppercase mb-2 block">
+                      <span className="text-xs font-[family-name:var(--font-display)] uppercase mb-2 block" style={{ color: '#EE0000' }}>
                         {item.category}
                       </span>
                       <h4 className="text-base font-semibold mb-2.5 transition-colors duration-300 group-hover:text-weld">
                         {item.title}
                       </h4>
-                      <span className="read-more-w text-[13px] inline-flex items-center gap-1">
+                      <span className="text-[13px] inline-flex items-center gap-1.5 px-4 py-2 rounded-[4px] transition-all hover:opacity-90" style={{ backgroundColor: '#2A2F7A', color: '#ffffff', fontWeight: '600' }}>
                         Read More →
                       </span>
                     </div>
@@ -59,7 +59,7 @@ export default function News() {
             <ScrollReveal variant="fade-left" delay={0.15} className="order-1 lg:order-2">
               <Link href={`/news/${featuredArticle.slug}`}>
                 <motion.div
-                  className="relative rounded-[var(--radius-card)] overflow-hidden min-h-[400px] md:min-h-full flex items-end p-9 bg-cover bg-center shadow-[var(--shadow-card)] group"
+                  className="relative rounded-[var(--radius-card)] overflow-hidden min-h-[400px] md:min-h-full flex items-end p-9 bg-cover bg-center shadow-[var(--shadow-card)] group featured-news-card"
                   style={{
                     backgroundImage:
                       `linear-gradient(180deg, rgba(21,23,31,0.1), rgba(21,23,31,0.9)), url(${featuredArticle.image})`,
@@ -71,13 +71,13 @@ export default function News() {
                     className="absolute inset-0 bg-iron/0 group-hover:bg-iron/10 transition-colors duration-500"
                   />
                   <div className="relative z-[1]">
-                    <span className="text-weld text-xs font-semibold font-[family-name:var(--font-display)] uppercase mb-3 block">
+                    <span className="text-xs font-semibold font-[family-name:var(--font-display)] uppercase mb-3 block" style={{ color: '#EE0000' }}>
                       {featuredArticle.category}
                     </span>
-                    <h3 className="text-white text-2xl md:text-[26px] font-semibold max-w-[320px] mb-4 transition-transform duration-500 group-hover:translate-y-[-4px]">
+                    <h3 className="featured-news-title text-white text-2xl md:text-[26px] font-semibold max-w-[320px] mb-4 transition-all duration-500 group-hover:translate-y-[-4px]">
                       {featuredArticle.title}
                     </h3>
-                    <span className="read-more-w text-white hover:text-weld inline-flex items-center gap-1">
+                    <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-[4px] transition-all" style={{ backgroundColor: '#2A2F7A', color: '#ffffff', fontWeight: '600' }}>
                       Read More →
                     </span>
                   </div>

@@ -80,9 +80,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 1.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span><b>2016</b> established</span>
-          <span><b>UAE</b> based</span>
-          <span><b>100</b> trusted partners</span>
+          <span><b style={{ color: '#2A2F7A' }}>2016</b> established</span>
+          <span><b style={{ color: '#2A2F7A' }}>UAE</b> based</span>
+          <span><b style={{ color: '#2A2F7A' }}>100</b> trusted partners</span>
         </motion.div>
       </div>
 
