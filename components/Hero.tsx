@@ -30,16 +30,10 @@ export default function Hero() {
             className="block text-white"
             segmentClassName="text-white"
           />
-          <div className="liquid-text hero-main-text" data-text="Built For Industry">
-            <KineticTextReveal
-              text="Built For Industry"
-              splitBy="words"
-              direction="up"
-              stagger={0.08}
-              delay={0.65}
-              className="block text-navy-blue mt-1 liquid-text-base"
-              segmentClassName="text-navy-blue not-italic"
-            />
+          <div className="mt-1">
+            <span className="liquid-text-base liquid-text" data-text="Built For Industry">
+              Built For Industry
+            </span>
           </div>
         </h1>
 
