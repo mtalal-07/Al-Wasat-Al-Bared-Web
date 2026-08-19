@@ -51,10 +51,10 @@ export default function ServicesPage() {
                   <div className="flex items-center gap-2 mb-2">
                     <span className="font-bold text-sm" style={{ color: '#EE0000' }}>SVC {service.num}</span>
                   </div>
-                  <h4 className="font-[family-name:var(--font-display)] text-[18px] font-semibold text-heading mb-2.5 leading-[1.35]">
+                  <h4 className="font-[family-name:var(--font-display)] text-[22px] font-semibold text-heading mb-2.5 leading-[1.35]">
                     {service.title}
                   </h4>
-                  <p className="font-[family-name:var(--font-body)] text-[14px] text-body leading-[1.7] mb-4">
+                  <p className="font-[family-name:var(--font-body)] text-[16px] font-bold text-body leading-[1.7] mb-4">
                     {service.description}
                   </p>
                   <Link 

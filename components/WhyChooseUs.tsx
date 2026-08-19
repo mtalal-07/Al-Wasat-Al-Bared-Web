@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
         <ScrollReveal variant="blur-up">
           <Eyebrow centered>Why Choose Us.</Eyebrow>
           <h2 className="section-title text-white">Trust Our Expertise</h2>
-          <p className="section-intro mx-auto text-on-dark-muted">
+          <p className="section-intro mx-auto text-on-dark-muted font-bold">
             Reliable Delivery, Certified Teams, And Modern Equipment Come Together So Every Metal Fabrication Job Is Handled Right The First Time.
           </p>
         </ScrollReveal>
@@ -86,10 +86,10 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <h3 className="text-white text-[22px] font-semibold mb-3.5">We Are Always Ready To Serve</h3>
-            <p className="text-sm mb-5 text-on-dark-muted">Whatever the scale of the job, our crews show up prepared, on schedule, and ready to work.</p>
+            <p className="text-sm mb-5 text-on-dark-muted font-bold">Whatever the scale of the job, our crews show up prepared, on schedule, and ready to work.</p>
             <ul className="space-y-3 mb-6">
               {checklist.map((item) => (
-                <li key={item} className="flex gap-2.5 items-center text-sm text-on-dark-muted">
+                <li key={item} className="flex gap-2.5 items-center text-sm text-on-dark-muted font-bold">
                   <span className="w-5 h-5 bg-weld text-iron rounded-full flex items-center justify-center text-[11px] flex-shrink-0">✓</span>
                   {item}
                 </li>

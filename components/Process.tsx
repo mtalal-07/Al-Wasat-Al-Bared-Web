@@ -70,7 +70,7 @@ export default function Process() {
                   transition={{ duration: 0.65, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
                   whileHover={{ y: -6, boxShadow: '0 28px 56px rgba(21,23,31,0.16)' }}
                 >
-                  <p className="text-[15px] md:text-[16px] text-heading font-medium leading-[1.6] mb-3">
+                  <p className="text-[15px] md:text-[16px] text-heading font-bold leading-[1.6] mb-3">
                     Get A Free Estimate Or Schedule An Appointment With Us.
                   </p>
                   <Link href="/contact" className="read-more-w text-[15px] font-semibold">
@@ -87,7 +87,7 @@ export default function Process() {
               <h2 className="section-title text-[32px] md:text-[40px] leading-[1.2]">
                 Procedure For Getting Our Best Service
               </h2>
-              <p className="text-[16px] md:text-[17px] text-body leading-[1.75] mb-10 max-w-[540px]">
+              <p className="text-[16px] md:text-[17px] text-body font-bold leading-[1.75] mb-10 max-w-[540px]">
                 A simple four-step process, from first contact to finished job, designed to keep you informed at every stage.
               </p>
             </ScrollReveal>
@@ -117,7 +117,7 @@ export default function Process() {
                         <h4 className="font-[family-name:var(--font-display)] text-[18px] md:text-[20px] font-semibold text-heading mb-2 leading-[1.35]">
                           {step.title}
                         </h4>
-                        <p className="font-[family-name:var(--font-body)] text-[15px] md:text-[16px] text-body leading-[1.75]">
+                        <p className="font-[family-name:var(--font-body)] text-[15px] md:text-[16px] text-body font-bold leading-[1.75]">
                           {step.description}
                         </p>
                       </div>

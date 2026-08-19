@@ -62,10 +62,10 @@ function ServiceCard({
       >
         <Icon size={22} strokeWidth={1.75} />
       </motion.div>
-      <h4 className="font-[family-name:var(--font-display)] text-[22px] font-semibold text-heading mb-2.5 leading-[1.35]">
+      <h4 className="font-[family-name:var(--font-display)] text-[26px] font-semibold text-heading mb-2.5 leading-[1.35]">
         {title}
       </h4>
-      <p className="font-[family-name:var(--font-body)] text-[14px] text-body leading-[1.7] mb-6 max-w-[280px] mx-auto flex-grow">
+      <p className="font-[family-name:var(--font-body)] text-[16px] font-bold text-body leading-[1.7] mb-6 max-w-[280px] mx-auto flex-grow">
         {description}
       </p>
       <span className="btn-w btn-primary-w inline-flex items-center justify-center gap-2 group/btn mt-auto cursor-pointer w-full" style={{ fontSize: '14px', padding: '12px 20px' }}>
@@ -120,7 +120,7 @@ export default function Services() {
                 <h4 className="font-[family-name:var(--font-display)] text-white text-[20px] md:text-[22px] font-semibold mb-3 leading-[1.3]">
                   Explore More Services
                 </h4>
-                <p className="font-[family-name:var(--font-body)] text-[14px] text-on-dark-muted leading-[1.7] mb-6 max-w-[260px] mx-auto">
+                <p className="font-[family-name:var(--font-body)] text-[16px] font-bold text-on-dark-muted leading-[1.7] mb-6 max-w-[260px] mx-auto">
                   See the full range of metal fabrication and aluminium services we offer.
                 </p>
                 <Link href="/services" className="btn-w btn-primary-w text-[15px] py-3.5 px-8 inline-flex items-center gap-2 group/btn">

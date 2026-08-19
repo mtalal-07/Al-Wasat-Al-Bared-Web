@@ -54,7 +54,7 @@ export default function About() {
                 </h2>
               </StaggerItem>
               <StaggerItem variant="fade-up">
-                <p className="text-body text-[15px] md:text-[16px] leading-[1.75] mb-8 max-w-[540px]">
+                <p className="text-body text-[15px] md:text-[16px] font-bold leading-[1.75] mb-8 max-w-[540px]">
                   Since 2016, AL WASAT AL BARED ENG. TURNING LLC has delivered precision steel, aluminium, and stainless steel fabrication. Every project is handled with certified craftsmanship, on-time delivery, and equipment you can trust.
                 </p>
               </StaggerItem>
@@ -71,7 +71,7 @@ export default function About() {
                     </div>
                     <div>
                       <h4 className="text-heading text-[17px] font-semibold mb-1.5">Strict Deadline</h4>
-                      <p className="text-[13px] text-body leading-[1.65]">We plan around your schedule, not ours.</p>
+                      <p className="text-[13px] text-body font-bold leading-[1.65]">We plan around your schedule, not ours.</p>
                     </div>
                   </motion.div>
                 </StaggerItem>
@@ -86,7 +86,7 @@ export default function About() {
                     </div>
                     <div>
                       <h4 className="text-heading text-[17px] font-semibold mb-1.5">Talented Staff</h4>
-                      <p className="text-[13px] text-body leading-[1.65]">Certified fabricators across every specialty.</p>
+                      <p className="text-[13px] text-body font-bold leading-[1.65]">Certified fabricators across every specialty.</p>
                     </div>
                   </motion.div>
                 </StaggerItem>

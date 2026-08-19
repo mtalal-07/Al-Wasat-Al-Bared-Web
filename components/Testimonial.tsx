@@ -260,7 +260,7 @@ export default function Testimonial() {
                   transition={{ duration: 0.3 }}
                 >
                   {/* Testimonial Text */}
-                  <p className="text-gray-600 text-[15px] leading-relaxed mb-6 flex-grow line-clamp-4">
+                  <p className="text-gray-600 text-[15px] font-bold leading-relaxed mb-6 flex-grow line-clamp-4">
                     {testimonial.text}
                   </p>
 
